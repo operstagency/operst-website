@@ -1,0 +1,54 @@
+---
+### ALL PAGES ###
+layout: app/global/authentication
+permalink: /forgot/
+
+### REGULAR PAGES ###
+meta:
+  title: "Recover your Account - Operst"
+  description: "Recover and regain access to a lost account."
+  breadcrumb: "Forgot"
+
+settings:
+  manager-configuration: "
+  {
+    auth: {
+      state: 'prohibited'
+    }
+  }
+  "
+---
+<form class="js-validate" onsubmit="return false;">
+  <!-- Title -->
+  <div class="mb-5 mb-md-7">
+    <h1 class="h2">Forgot your password?</h1>
+    <p>Enter your email address below and we'll get you back on track.</p>
+  </div>
+  <!-- End Title -->
+
+  <!-- Form Group -->
+  <div class="js-form-message form-group">
+    <label class="input-label" for="authentication-email">Email</label>
+    <input type="email" class="form-control auth-email-input" name="email" id="authentication-email" placeholder="jonsnow@gmail.com" aria-label="Email address" required autocomplete="email" autofocus>
+  </div>
+  <!-- End Form Group -->
+
+  <div class="alert alert-danger auth-error-message-element" hidden>
+  </div>
+
+  <!-- Button -->
+  <div class="row align-items-center mb-5">
+    <div class="col-12">
+      <span class="font-size-1 text-muted">Don't have an account?</span>
+      <a class="font-size-1 font-weight-bold" href="{{ site.url }}/signup">Create one</a>
+      <br>
+      <span class="font-size-1 text-muted">Ready to sign in?</span>
+      <a class="font-size-1 font-weight-bold" href="{{ site.url }}/signin">Signin</a>
+    </div>
+
+    <div class="col-12 mt-3">
+      <button type="submit" class="btn btn-primary btn-block transition-3d-hover auth-forgot-email-btn">Send password reset email</button>
+    </div>
+  </div>
+  <!-- End Button -->
+</form>

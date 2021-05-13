@@ -1,0 +1,859 @@
+---
+### ALL PAGES ###
+layout: master/global/default
+permalink: /account/
+sitemap:
+  include: false
+
+### REGULAR PAGES ###
+meta:
+  title: "Account - Operst"
+  description: "View your personal profile and stats for Operst and see how you compare to others who are automating their social media."
+  breadcrumb: "Account"
+
+settings:
+  manager-configuration: "
+  {
+    auth: {
+      state: 'required'
+    }
+  }
+  "
+---
+<!-- ========== MAIN ========== -->
+<main id="content" role="main" class="bg-light">
+  <!-- Breadcrumb Section -->
+  <div class="bg-dark" style="background-image: url(/assets/svg/components/abstract-shapes-20.svg);">
+    <div class="container space-1 space-top-3 space-bottom-lg-3">
+      <div class="row align-items-center">
+        <div class="col">
+          <div class="d-none d-lg-block">
+            <h1 class="h2 text-white">Welcome,</h1>
+          </div>
+
+          <!-- Breadcrumb -->
+          <ol class="breadcrumb breadcrumb-light breadcrumb-no-gutter mb-0">
+            <li class="breadcrumb-item auth-email-element">valued member</li>
+          </ol>
+          <!-- End Breadcrumb -->
+        </div>
+
+        <div class="col-auto">
+          <div class="d-none d-lg-block">
+            <a class="btn btn-sm btn-soft-light auth-signout-all-btn" href="#">Sign out</a>
+          </div>
+
+          <!-- Responsive Toggle Button -->
+          <button type="button" class="navbar-toggler btn btn-icon btn-sm rounde-circle d-lg-none"
+                  aria-label="Toggle navigation"
+                  aria-expanded="false"
+                  aria-controls="sidebarNav"
+                  data-toggle="collapse"
+                  data-target="#sidebarNav">
+            <span class="navbar-toggler-default">
+              <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                <path fill="currentColor" d="M17.4,6.2H0.6C0.3,6.2,0,5.9,0,5.5V4.1c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,5.9,17.7,6.2,17.4,6.2z M17.4,14.1H0.6c-0.3,0-0.6-0.3-0.6-0.7V12c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,13.7,17.7,14.1,17.4,14.1z"/>
+              </svg>
+            </span>
+            <span class="navbar-toggler-toggled">
+              <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                <path fill="currentColor" d="M11.5,9.5l5-5c0.2-0.2,0.2-0.6-0.1-0.9l-1-1c-0.3-0.3-0.7-0.3-0.9-0.1l-5,5l-5-5C4.3,2.3,3.9,2.4,3.6,2.6l-1,1 C2.4,3.9,2.3,4.3,2.5,4.5l5,5l-5,5c-0.2,0.2-0.2,0.6,0.1,0.9l1,1c0.3,0.3,0.7,0.3,0.9,0.1l5-5l5,5c0.2,0.2,0.6,0.2,0.9-0.1l1-1 c0.3-0.3,0.3-0.7,0.1-0.9L11.5,9.5z"/>
+              </svg>
+            </span>
+          </button>
+          <!-- End Responsive Toggle Button -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Breadcrumb Section -->
+
+  <!-- Content Section -->
+  <div class="container space-1 space-top-lg-0 space-bottom-lg-2 mt-lg-n10">
+    <div class="row">
+      <div class="col-lg-3">
+        <!-- Navbar -->
+        <div class="navbar-expand-lg navbar-expand-lg-collapse-block navbar-light">
+          <div id="sidebarNav" class="collapse navbar-collapse navbar-vertical">
+            <!-- Card -->
+            <div class="card mb-5">
+              <div class="card-body">
+                <!-- Avatar -->
+                <div class="d-none d-lg-block text-center mb-5">
+                  <!-- <div class="avatar avatar-xxl avatar-circle mb-3">
+                    <img class="avatar-img" src="/assets/img/160x160/img1.jpg" alt="Image Description">
+                    <img class="avatar-status avatar-lg-status" src="/assets/svg/illustrations/top-vendor.svg" alt="Image Description" data-toggle="tooltip" data-placement="top" title="Verified user">
+                  </div> -->
+
+                  <div class="avatar avatar-xxl avatar-circle">
+                    <i class="fas fa-user fa-4x text-primary"></i>
+                  </div>
+
+                  <h5 class="card-title auth-email-element">Valued member</h5>
+                </div>
+                <!-- End Avatar -->
+
+                <!-- Nav -->
+                <h6 class="text-cap small">Account</h6>
+
+                <!-- List -->
+                <ul class="nav nav-sub nav-sm nav-tabs nav-list-y-2 mb-4">
+                  <li class="nav-item">
+                    <a class="nav-link account-panel-link disabled" data-panel="info" href="#" disabled>
+                      <i class="fas fa-id-card nav-icon"></i> General
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link account-panel-link disabled" data-panel="connections" href="#" disabled>
+                      <i class="fas fa-link nav-icon"></i> Connections
+                    </a>
+                  </li>
+                  <!-- <li class="nav-item">
+                    <a class="nav-link " href="account-notifications.html">
+                      <i class="fas fa-bell nav-icon"></i> Notifications
+                      <span class="badge badge-soft-dark badge-pill nav-link-badge">1</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " href="account-preferences.html">
+                      <i class="fas fa-sliders-h nav-icon"></i> Preferences
+                    </a>
+                  </li> -->
+                </ul>
+                <!-- End List -->
+
+                <h6 class="text-cap small">Billing</h6>
+
+                <!-- List -->
+                <ul class="nav nav-sub nav-sm nav-tabs nav-list-y-2">
+                  <li class="nav-item">
+                    <a class="nav-link account-panel-link disabled" data-panel="billing" href="#" disabled>
+                      <i class="fas fa-credit-card nav-icon"></i> Plans &amp; payment
+                    </a>
+                  </li>
+                  <!-- <li class="nav-item">
+                    <a class="nav-link " href="account-address.html">
+                      <i class="fas fa-map-marker-alt nav-icon"></i> Address
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " href="account-teams.html">
+                      <i class="fas fa-users nav-icon"></i> Teams
+                      <span class="badge badge-soft-dark badge-pill nav-link-badge">+2 new users</span>
+                    </a>
+                  </li> -->
+                </ul>
+                <!-- End List -->
+
+                <div class="d-lg-none">
+                  <div class="dropdown-divider"></div>
+
+                  <!-- List -->
+                  <ul class="nav nav-sub nav-sm nav-tabs nav-list-y-2">
+                    <li class="nav-item">
+                      <a class="nav-link text-primary auth-signout-all-btn" href="#">
+                        <i class="fas fa-sign-out-alt nav-icon"></i> Sign out
+                      </a>
+                    </li>
+                  </ul>
+                  <!-- End List -->
+                </div>
+                <!-- End Nav -->
+              </div>
+            </div>
+            <!-- End Card -->
+          </div>
+        </div>
+        <!-- End Navbar -->
+      </div>
+
+      <div class="col-lg-9">
+        <!-- Card -->
+        <div class="account-panel" data-panel="info" hidden>
+          <div class="card mb-3 mb-lg-5">
+            <div class="card-header">
+              <h5 class="card-title">General</h5>
+            </div>
+
+            <!-- Body -->
+            <div class="card-body">
+              <form>
+                <!-- Form Group -->
+                <!-- <div class="row form-group">
+                  <label for="firstNameLabel" class="col-sm-3 col-form-label input-label">Full name <i class="far fa-question-circle text-body ml-1" data-toggle="tooltip" data-placement="top" title="Displayed on public forums, such as Front."></i></label>
+
+                  <div class="col-sm-9">
+                    <div class="input-group">
+                      <input type="text" class="form-control" name="firstName" id="firstNameLabel" placeholder="Clarice" aria-label="Clarice" value="Natalie">
+                      <input type="text" class="form-control" name="lastName" id="lastNameLabel" placeholder="Boone" aria-label="Boone" value="Curtis">
+                    </div>
+                  </div>
+                </div> -->
+                <!-- End Form Group -->
+
+                <!-- Form Group -->
+                <div class="row form-group">
+                  <label for="emailLabel" class="col-sm-3 col-form-label input-label">Email</label>
+
+                  <div class="col-sm-9">
+                    <input type="email" class="form-control auth-email-element" name="email" id="emailLabel" placeholder="you@gmail.com" aria-label="you@gmail.com" value="you@gmail.com" readonly>
+                  </div>
+                </div>
+                <!-- End Form Group -->
+
+                <!-- Form Group -->
+                <div class="row form-group">
+                  <label for="uidLabel" class="col-sm-3 col-form-label input-label">UID</label>
+
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control auth-uid-element" name="email" id="uidLabel" placeholder="xxxx" aria-label="xxxx" value="xxxx" readonly>
+                  </div>
+                </div>
+                <!-- End Form Group -->
+
+                <!-- Form Group -->
+                <!-- <div class="row align-items-center">
+                  <label for="disableAdCheckbox" class="col-sm-3 col-form-label input-label">Disable ads <span class="badge badge-primary text-uppercase ml-1">PRO</span></label>
+
+                  <div class="col-sm-9">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="disableAdCheckbox">
+                      <label class="custom-control-label" for="disableAdCheckbox">With your Pro account, you can disable ads across the site.</label>
+                    </div>
+                  </div>
+                </div> -->
+                <!-- End Form Group -->
+              </form>
+            </div>
+            <!-- End Body -->
+
+            <!-- Footer -->
+            <!-- <div class="card-footer d-flex justify-content-end">
+              <a class="btn btn-white" href="javascript:;">Cancel</a>
+              <span class="mx-2"></span>
+              <a class="btn btn-primary" href="javascript:;">Save Changes</a>
+            </div> -->
+            <!-- End Footer -->
+          </div>
+
+
+          <!-- End Card -->
+
+          <!-- Card -->
+          <div class="card">
+            <div class="card-header">
+              <h5 class="card-title">Delete your account</h5>
+            </div>
+
+            <!-- Body -->
+            <div class="card-body">
+              <p class="card-text">When you delete your account you lose access to all Operst services and we permanently delete your personal data.</p>
+
+              <form class="" action="{{ site.url }}/account/delete/" method="post">
+                <div class="form-group">
+                  <!-- Custom Checkbox -->
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="deleteAccountCheckbox" required>
+                    <label class="custom-control-label" for="deleteAccountCheckbox">Confirm that I want to delete my account.</label>
+                  </div>
+                  <!-- End Custom Checkbox -->
+                </div>
+
+                <div class="d-flex justify-content-end">
+                  <button type="submit" class="btn btn-danger transition-3d-hover">Delete</button>
+                </div>
+              </form>
+            </div>
+            <!-- End Body -->
+          </div>
+          <!-- End Card -->
+        </div>
+
+
+        <div class="account-panel" data-panel="connections" hidden>
+          <div class="card mb-3 mb-lg-5">
+            <div class="card-header">
+              <h5 class="card-title">Connections</h5>
+            </div>
+
+            <!-- Body -->
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-6 mb-4 mb-md-0">
+                  <div class="mb-4">
+                    <small class="text-cap">Discord</small>
+                    <h5 id="connections-discord-status">Loading...</h5>
+                  </div>
+
+                </div>
+
+                <div class="col-md-6 text-md-right">
+                  <a id="connections-discord-unlink" class="btn btn-sm btn-white mr-1 mb-0 mb-md-2" href="#" disabled>Unlink Discord</a>
+                  <a id="connections-discord-link" class="btn btn-sm btn-primary transition-3d-hover mb-0 mb-md-2" href="#" disabled>Link Discord</a>
+                </div>
+
+
+
+                <div id="connections-paypal-group" class="col-12" hidden>
+                  <div class="row">
+                    <div class="col-md-3 mb-4 mb-md-0">
+                      <div class="mb-4">
+                        <small class="text-cap">PayPal</small>
+                        <h5 id="connections-paypal-status">Not linked</h5>
+                      </div>
+
+                    </div>
+
+                    <div class="col-md-6 mb-4 mb-md-0">
+                      <form>
+                        <!-- Form Group -->
+                        <div class="row form-group">
+                          <!-- <label for="profileLabel" class="col-sm-3 col-form-label input-label">Payment Profile</label> -->
+
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" name="profile" id="connections-paypal-profile" placeholder="I-Y3FEL44WUVPU" aria-label="I-Y3FEL44WUVPU" value="">
+                            <small>Input your PayPal Subscription ID</small>
+                          </div>
+                        </div>
+                        <!-- End Form Group -->
+
+
+                      </form>
+                    </div>
+
+                    <div class="col-md-3 text-md-right">
+                      <a id="connections-paypal-link" class="btn btn-sm btn-primary transition-3d-hover mb-0 mb-md-2" href="#">Link PayPal</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="row">
+                <div class="col-12">
+                  <div id="connections-alert" class="alert" role="alert">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Body -->
+
+            <!-- Footer -->
+            <!-- <div class="card-footer d-flex justify-content-end">
+              <a class="btn btn-white" href="javascript:;">Cancel</a>
+              <span class="mx-2"></span>
+              <a class="btn btn-primary" href="javascript:;">Save Changes</a>
+            </div> -->
+            <!-- End Footer -->
+          </div>
+          <!-- End Card -->
+
+        </div>
+
+
+
+
+        <div class="account-panel" data-panel="billing" hidden>
+          <!-- Card -->
+          <div class="card mb-3 mb-lg-5">
+            <!-- Header -->
+            <div class="card-header">
+              <h5 class="card-header-title">Overview</h5>
+
+              <!-- <a class="btn btn-sm btn-ghost-secondary" href="#">
+                <i class="fas fa-file-download mr-1"></i>
+                Download .CSV
+              </a> -->
+            </div>
+            <!-- End Header -->
+
+            <!-- Body -->
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-6 mb-4 mb-md-0">
+                  <div class="mb-4">
+                    <small class="text-cap">Your plan<span id="billing-frequency"> (billed loading...)</span>:</small>
+                    <h5><span id="billing-plan-id">loading...</span><span id="billing-start-date">loading...</span> </h5>
+                  </div>
+
+                  <div>
+                    <small id="billing-expiration" class="text-cap text-danger"></small>
+                  </div>
+
+                  <!-- <div>
+                    <small class="text-cap">Total per year</small>
+                    <h3 class="text-primary">$264 USD</h3>
+                  </div> -->
+                </div>
+
+                <div class="col-md-6 text-md-right">
+                  <a id="billing-update-btn" class="btn btn-sm btn-white mr-1 mb-0 mb-md-2" href="#" hidden>Update</a>
+                  <a id="billing-subscribe-btn" class="btn btn-sm btn-success transition-3d-hover mb-0 mb-md-2" href="{{ site.url }}/pricing" hidden><i class="fas fa-star mr-1"></i> Subscribe</a>
+                </div>
+              </div>
+            </div>
+            <!-- End Body -->
+
+            <!-- <hr class="my-3"> -->
+
+            <!-- Body -->
+            <div class="card-body" hidden>
+              <div class="row align-items-center flex-grow-1 mb-2">
+                <div class="col">
+                  <h4 class="card-header-title">Storage usage</h4>
+                </div>
+
+                <div class="col-auto">
+                  <strong class="text-dark">4.27 GB</strong> used of 6 GB
+                </div>
+              </div>
+
+              <!-- Progress -->
+              <div class="progress rounded-pill mb-3">
+                <div class="progress-bar" role="progressbar" style="width: 33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar opacity" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <!-- End Progress -->
+
+              <!-- Legend Indicators -->
+              <div class="list-inline">
+                <div class="list-inline-item">
+                  <span class="legend-indicator bg-primary"></span>Personal usage space
+                </div>
+                <div class="list-inline-item">
+                  <span class="legend-indicator bg-primary opacity"></span>Shared space
+                </div>
+                <div class="list-inline-item">
+                  <span class="legend-indicator"></span>Unused space
+                </div>
+              </div>
+              <!-- End Legend Indicators -->
+            </div>
+            <!-- End Body -->
+          </div>
+          <!-- End Card -->
+        </div>
+
+      </div>
+    </div>
+    <!-- End Row -->
+  </div>
+  <!-- End Content Section -->
+</main>
+<!-- ========== END MAIN ========== -->
+
+<script type="text/javascript">
+  Manager.auth().ready(function () {
+
+    var oauthURL = 'https://discord.com/api/oauth2/authorize?client_id=701375931918581810&redirect_uri=URL&response_type=code&scope=identify';
+    var isDevelopment = Manager.properties.meta.environment === 'development';
+    var apiLinkURL = isDevelopment ? 'http://localhost:5000/discord-link' : 'https://api.Operst.com/discord-link';
+    var apiUnlinkURL = isDevelopment ? 'http://localhost:5000/discord-unlink' : 'https://api.Operst.com/discord-unlink';
+    var cancelURL = isDevelopment ? 'http://localhost:4001/cancel/' : 'https://itwcreativeworks.com/cancel/';
+    var isLinked = false;
+
+    var MESSAGE_LINK_SUCCESS = 'Your Discord and Operst accounts have been linked! <br><br>You can go back to <a href="https://discord.com/app" target="_blank" class="btn btn-light btn-xs mx-2">Discord</a> now.';
+    var MESSAGE_UNLINK_SUCCESS = 'Your Discord and Operst accounts have been unlinked.';
+
+    var dom = Manager.dom();
+    var panelLinks = dom.select('.account-panel-link');
+    var panelPanel = dom.select('.account-panel');
+
+    var billingSubscribeBtn = document.getElementById('billing-subscribe-btn');
+    var billingUpdateBtn = document.getElementById('billing-update-btn');
+    var billingPlanId = document.getElementById('billing-plan-id');
+    var billingFrequencyEl = document.getElementById('billing-frequency');
+    var billingStartDateEl = document.getElementById('billing-start-date');
+    var billingExpirationDateEl = document.getElementById('billing-expiration');
+
+    var connectionsDiscordUnlinkBtn = dom.select('#connections-discord-unlink');
+    var connectionsDiscordLinkBtn = dom.select('#connections-discord-link');
+    var connectionsPayPalLinkBtn = dom.select('#connections-paypal-link');
+    var connectionsDiscordStatusEl = document.getElementById('connections-discord-status');
+
+    var connectionsPayPalGroup = document.getElementById('connections-paypal-group');
+    var connectionsPayPalProfileInput = document.getElementById('connections-paypal-profile');
+
+    var connectionsAlertEl = document.getElementById('connections-alert');
+
+    var fetchedBilling = false;
+
+    var qsAccessToken = Manager.properties.page.queryString.get('access_token');
+    var qsTokenType = Manager.properties.page.queryString.get('token_type');
+    var qsStatus = Manager.properties.page.queryString.get('status');
+    var qsError = Manager.properties.page.queryString.get('error');
+    var qsLinkDiscord = Manager.properties.page.queryString.get('link-discord');
+    var qsLinkPayPal = Manager.properties.page.queryString.get('link-paypal');
+    var qsLinkPayPalProfileId = Manager.properties.page.queryString.get('profile-id');
+
+
+    // Discord link
+    if (qsAccessToken) {
+      firebase.auth().currentUser.getIdToken(false)
+      .then(function(token) {
+        fetch(apiLinkURL, {
+          method: 'POST',
+          headers: {
+            authorization: `Bearer ${token}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            completeLink: true,
+            accessToken: qsAccessToken,
+          })
+        })
+        .then(function (res) {
+          if (res.status >= 200 && res.status < 300) {
+            return res.json();
+          } else {
+            return res.text()
+            .then(function (r) {
+              throw new Error(r || res.statusText)
+            })
+          }
+        })
+        .then(function (response) {
+          isLinked = true;
+          setStatus(MESSAGE_LINK_SUCCESS.replace('{id}', response.id))
+        })
+        .catch(function (e) {
+          setStatus(new Error('There was an error linking your accounts. Please try again: ' + e))
+        });
+      })
+      .catch(function(error) {
+        setStatus(error);
+      });
+    }
+
+
+
+    panelLinks.on('click', function (event) {
+      panelLinks.removeClass('active');
+      event.target.classList.add('active');
+
+      panelPanel.setAttribute('hidden', true);
+
+      dom.select('.account-panel[data-panel="' + event.target.dataset.panel + '"]').removeAttribute('hidden');
+
+      if (event.target.dataset === 'billing' || event.target.dataset === 'connections') {
+        fetchAccount();
+      }
+    })
+    .removeAttribute('disabled')
+    .removeClass('disabled')
+
+    connectionsDiscordUnlinkBtn.on('click', function (event) {
+      discordUnlink();
+    })
+
+    connectionsDiscordLinkBtn.on('click', function (event) {
+      discordLink();
+    })
+
+    connectionsPayPalLinkBtn.on('click', function (event) {
+      linkPayPal();
+    })
+
+    // Set first tab
+    if (qsLinkDiscord) {
+      dom.select('.account-panel-link[data-panel="connections"]').elements.list[0].click();
+      if (qsStatus === 'done') {
+        if (qsError) {
+          setStatus(new Error(qsError));
+        }
+      }
+    } else if (qsLinkPayPal) {
+      dom.select('.account-panel-link[data-panel="connections"]').elements.list[0].click();
+      connectionsPayPalGroup.removeAttribute('hidden');
+      connectionsPayPalProfileInput.value = qsLinkPayPalProfileId;
+    } else {
+      panelLinks.elements.list[0].click();
+    }
+
+    fetchAccount()
+    // <a class="nav-link account-panel-link" data-panel="info" href="#" disabled>
+    // <div class="account-panel" data-panel="info" hidden>
+
+    function uppercase(str) {
+      return str.charAt(0).toUpperCase() + str.slice(1);
+    }
+
+    function getMonth(date) {
+      var monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+      return monthNames[date.getMonth()];
+    }
+
+    function fetchAccount() {
+      var user = firebase.auth().currentUser;
+      // console.log('----1', fetchedBilling, user.uid);
+      if (!fetchedBilling && user) {
+        // console.log('----2');
+        firebase.firestore().doc(`/users/${user.uid}`)
+          .onSnapshot(function (snapshot) {
+            var data = snapshot.data() || {};
+
+            // Fix data from snap
+            data.roles = data.roles || {};
+            data.roles.betaTester = data.roles.betaTester === true || data.roles.betaTester === 'true';
+            data.roles.developer = data.roles.developer === true || data.roles.developer === 'true';
+            data.roles.admin = data.roles.admin === true || data.roles.admin === 'true';
+            data.roles.promoExempt = data.roles.promoExempt === true || data.roles.promoExempt === 'true';
+
+            data.plan = data.plan || {};
+            data.plan.expires = data.plan.expires || {};
+            data.plan.expires.timestamp = data.plan.expires.timestamp || '1999-01-01T00:00:00Z';
+            data.plan.payment = data.plan.payment || {};
+            data.plan.payment.startDate = data.plan.payment.startDate || {};
+            data.plan.payment.startDate.timestamp = data.plan.payment.startDate.timestamp || '1999-01-01T00:00:00Z';
+            data.plan.payment.frequency = data.plan.payment.frequency || 'unknown';
+            data.plan.payment.orderId = data.plan.payment.orderId || 'unknown';
+            data.plan.payment.resourceId = data.plan.payment.resourceId || 'unknown';
+
+            data.plan.id = data.plan.id || 'basic';
+
+
+            data.oauth2 = data.oauth2 || {};
+            data.oauth2.discord = data.oauth2.discord || {};
+            data.oauth2.discord.user = data.oauth2.discord.user || {};
+            // data.oauth2.discord.user.id = data.oauth2.discord.user.id || null;
+
+            var planExpireDate = new Date(data.plan.expires.timestamp);
+            var now = new Date();
+            var daysTillExpire = Math.floor(( planExpireDate - now ) / 86400000);
+            // console.log('daysTillExpire', daysTillExpire);
+
+            if (data.plan.id === 'premium' && planExpireDate > now) {
+              data.plan.id = 'premium';
+            } else {
+              data.plan.id = 'basic';
+            }
+
+            // data.plan.id = 'basic'
+
+            billingSubscribeBtn.setAttribute('hidden', true);
+            billingUpdateBtn.setAttribute('hidden', true);
+
+            var updateURL = new URL(cancelURL);
+            if (data.plan.id === 'premium') {
+              billingUpdateBtn.removeAttribute('hidden');
+              updateURL.searchParams.set('appName', 'Operst');
+              updateURL.searchParams.set('supportUrl', '{{ site.url }}/support');
+              updateURL.searchParams.set('supportEmail', '{{ site.contact.email-support }}');
+              updateURL.searchParams.set('userEmail', user.email);
+              updateURL.searchParams.set('userId', user.uid);
+              updateURL.searchParams.set('orderId', data.plan.payment.orderId);
+              updateURL.searchParams.set('resourceId', data.plan.payment.resourceId);
+              billingUpdateBtn.setAttribute('href', updateURL.toString());
+            } else {
+              billingSubscribeBtn.removeAttribute('hidden');
+            }
+
+            var startDate = new Date(data.plan.payment.startDate.timestamp);
+            billingPlanId.innerText = uppercase(data.plan.id);
+            billingStartDateEl.innerText = data.plan.id === 'premium' ? ' - Purchased ' + getMonth(startDate) + ' ' + startDate.getDate() + ', ' + startDate.getFullYear() : '';
+            billingFrequencyEl.innerText = data.plan.id === 'premium' ? ' (billed ' + uppercase(data.plan.payment.frequency) + ')' : '';
+            billingExpirationDateEl.innerHTML = data.plan.id === 'premium' && daysTillExpire < 366
+              ? '<i class="fas fa-exclamation-triangle mr-1"></i> Expires in ' + daysTillExpire + ' days '
+              : ''
+
+
+            // Discord
+            // var connectionsDiscordUnlinkBtn = document.getElementById('connections-discord-unlink');
+            // var connectionsDiscordLinkBtn = document.getElementById('connections-discord-link');
+            // var connectionsDiscordStatusEl = document.getElementById('connections-discord-status');
+            if (data.oauth2.discord.user.id) {
+              connectionsDiscordStatusEl.innerText = 'Linked: ' + data.oauth2.discord.user.id;
+              connectionsDiscordLinkBtn.setAttribute('disabled', true).addClass('disabled')
+              connectionsDiscordUnlinkBtn.removeAttribute('disabled').removeClass('disabled')
+            } else {
+              connectionsDiscordStatusEl.innerText = 'Not linked';
+              connectionsDiscordLinkBtn.removeAttribute('disabled').removeClass('disabled')
+              connectionsDiscordUnlinkBtn.setAttribute('disabled', true).addClass('disabled')
+
+            }
+
+
+            console.log('data', data);
+
+            // Assign it to userObj
+            // userObj.auth.email = newUser.email;
+            // userObj.auth.uid = newUser.uid;
+            // userObj.plan.expires.timestamp = new Date(get(data, 'plan.expires.timestamp', '1999-01-01T00:00:00Z')).toISOString();
+            // userObj.plan.expires.timestampUNIX = Math.round(new Date(userObj.plan.expires.timestamp).getTime() / 1000);
+            // userObj.plan.devices = get(data, 'plan.devices', 1);
+            //
+            // let difference = ((new Date(userObj.plan.expires.timestamp).getTime() - new Date().getTime())/(24*3600*1000));
+            // if (difference > -1 && get(data, 'plan.id', 'basic') === 'premium') {
+            //   userObj.plan.id = 'premium';
+            // } else {
+            //   userObj.plan.id = 'basic';
+            // }
+            //
+            // userObj.roles.betaTester = (data.roles.betaTester && userObj.plan.id === 'premium');
+            // userObj.roles.developer = data.roles.developer;
+            // userObj.roles.admin = data.roles.admin;
+            //
+            // // logger.log('Got firestore snap');
+            // postAccountRetrieve(userObj);
+            fetchedBilling = true;
+          }, function (e) {
+            console.error('Could not get account info via firestore', e);
+          });
+      }
+    }
+
+    // DISCORD LINK
+    function generateRandomString() {
+      var rand = Math.floor(Math.random() * 10);
+      var randStr = '';
+
+      for (var i = 0; i < 20 + rand; i++) {
+        randStr += String.fromCharCode(33 + Math.floor(Math.random() * 94));
+      }
+
+      return randStr;
+    }
+
+    function setStatus(input) {
+      connectionsAlertEl.classList.remove('alert-info');
+      connectionsAlertEl.classList.remove('alert-danger');
+      connectionsAlertEl.classList.remove('alert-success');
+
+      // loginEl.href = oauthURL;
+      // loginEl.style.display = 'none';
+      // unlinkEl.style.display = 'none';
+
+      if (input instanceof Error) {
+        connectionsAlertEl.classList.add('alert-danger')
+        connectionsAlertEl.innerHTML = input.message;
+        // if (isLinked) {
+        //   unlinkEl.style.display = 'block';
+        // } else {
+        //   loginEl.style.display = 'block';
+        // }
+        // loginEl.classList.remove('disabled');
+        // unlinkEl.classList.remove('disabled');
+      } else if (input === 'loading') {
+        connectionsAlertEl.classList.add('alert-info')
+        connectionsAlertEl.innerHTML = 'Loading...';
+
+        // loginEl.classList.add('disabled');
+        // unlinkEl.classList.add('disabled');
+      } else {
+        connectionsAlertEl.classList.add('alert-success')
+        connectionsAlertEl.innerHTML = input;
+        // if (isLinked) {
+        //   unlinkEl.style.display = 'block';
+        // } else {
+        //   loginEl.style.display = 'block';
+        // }
+
+        // loginEl.classList.remove('disabled');
+        // unlinkEl.classList.remove('disabled');
+      }
+    }
+
+
+    function discordLink() {
+      setStatus('loading');
+      var user = firebase.auth().currentUser;
+      if (!user) { return }
+      oauthURL = oauthURL.replace('URL', encodeURIComponent(apiLinkURL))
+
+      window.location.href = oauthURL;
+
+    }
+
+    function discordUnlink() {
+      setStatus('loading');
+      var user = firebase.auth().currentUser;
+      if (!user) { return }
+
+      user.getIdToken(false)
+      .then(function(token) {
+        fetch(apiUnlinkURL, {
+          method: 'POST',
+          headers: {
+            authorization: `Bearer ${token}`,
+            'Content-Type': 'application/json'
+          },
+        })
+        .then(function (res) {
+          if (res.status >= 200 && res.status < 300) {
+            return res.json();
+          } else {
+            return res.text()
+            .then(function (r) {
+              throw new Error(r || res.statusText)
+            })
+          }
+        })
+        .then(function (response) {
+          isLinked = false;
+          setStatus(MESSAGE_UNLINK_SUCCESS.replace('{id}', response.id))
+        })
+        .catch(function (e) {
+          setStatus(new Error('There was an error unlinking your accounts. Please try again: ' + e))
+        });
+      })
+
+
+    }
+
+  var payPalLinkInProgress = false;
+  function linkPayPal() {
+    var linkUrl = Manager.properties.meta.environment === 'development'
+      ? 'http://localhost:5000/paypal-link'
+      : 'https://api.Operst.com/paypal-link'
+    var user = firebase.auth().currentUser;
+    var profileId = connectionsPayPalProfileInput.value;
+
+    if (!user) {return }
+
+    setStatus('loading');
+
+    if (!profileId) {
+      return setStatus(new Error('You must enter a PayPal subscription ID. You can find this number in your PayPal account and it has the following format: I-Y3FEL44WUVPU'));
+    }
+
+    if (payPalLinkInProgress) { return }
+
+    // console.log('----1', linkUrl);
+    payPalLinkInProgress = true;
+
+    user.getIdToken(false)
+    .then(function(token) {
+      fetch(linkUrl, {
+        method: 'POST',
+        body: JSON.stringify({
+          profileId: profileId,
+          authenticationToken: token,
+        }),
+        headers: {
+          'Content-Type': 'application/json'
+        },
+      })
+      .then(function (res) {
+        if (res.status >= 200 && res.status < 300) {
+          return res.json();
+        } else {
+          throw new Error(res.statusText);
+        }
+      })
+      .then(function (r) {
+        connectionsPayPalGroup.setAttribute('hidden', true);
+        setStatus('You have successfully connected your PayPal account to Operst. Your subscription should now be active.');
+        payPalLinkInProgress = false;
+      })
+      .catch(function (e) {
+        setStatus(e);
+        payPalLinkInProgress = false;
+      })
+    })
+
+  }
+
+
+  })
+</script>

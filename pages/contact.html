@@ -1,0 +1,165 @@
+---
+### ALL PAGES ###
+layout: master/global/default
+permalink: /contact/
+
+### REGULAR PAGES ###
+meta:
+  title: "Contact - Operst"
+  description: "Have a question or a comment? Please feel free to shoot us an email to learn more about Operst."
+  breadcrumb: "Contact"
+---
+<!-- ========== MAIN ========== -->
+<main id="content" role="main">
+  <!-- Hero Section -->
+  <div class="position-relative">
+    <div class="bg-img-hero" style="background-image: url(/assets/svg/components/abstract-shapes-12.svg);">
+      <div class="container space-top-3 space-top-lg-4 space-bottom-2 position-relative z-index-2">
+        <div class="w-md-80 w-lg-60 text-center mx-md-auto mb-5 mb-md-9">
+          <h1>Contact us</h1>
+          <p>Let's get in touch and work together!</p>
+        </div>
+
+        <!-- <div class="row">
+          <div class="col-md-4 mb-3 mb-md-0 mb-md-n11">
+            <a class="card text-center h-100 transition-3d-hover" href="{{ site.url }}/discord">
+              <div class="card-body p-lg-5">
+                <figure class="max-w-8rem w-100 mx-auto mb-4">
+                  <img class="img-fluid" src="/assets/svg/icons/icon-7.svg" alt="SVG">
+                </figure>
+                <h3 class="h4">Discord Support</h3>
+                <p class="text-body mb-0">The best way to get <strong>technical support</strong> is to ask our friendly discord community.</p>
+              </div>
+              <div class="card-footer font-weight-bold py-3 px-lg-5">
+                Discord support <i class="fas fa-angle-right fa-sm ml-1"></i>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-md-4 mb-3 mb-md-0 mb-md-n11">
+            <a class="card text-center h-100 transition-3d-hover" href="{{ site.url }}/about">
+              <div class="card-body p-lg-5">
+                <figure class="max-w-8rem w-100 mx-auto mb-4">
+                  <img class="img-fluid" src="/assets/svg/icons/icon-4.svg" alt="SVG">
+                </figure>
+                <h3 class="h4">FAQ</h3>
+                <p class="text-body mb-0">Search our FAQ for answers to anything you might need.</p>
+              </div>
+              <div class="card-footer font-weight-bold py-3 px-lg-5">
+                Visit FAQ <i class="fas fa-angle-right fa-sm ml-1"></i>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-md-4 mb-md-n11">
+            <a class="card text-center h-100 transition-3d-hover" href="#contact-form">
+              <div class="card-body p-lg-5">
+                <figure class="max-w-8rem w-100 mx-auto mb-4">
+                  <img class="img-fluid" src="/assets/svg/icons/icon-44.svg" alt="SVG">
+                </figure>
+                <h3 class="h4">Business Inquiry</h3>
+                <p class="text-body mb-0">Do you have a question for our team or want to work with us?</p>
+              </div>
+              <div class="card-footer font-weight-bold py-3 px-lg-5">
+                Contact us <i class="fas fa-angle-right fa-sm ml-1"></i>
+              </div>
+            </a>
+          </div>
+        </div> -->
+      </div>
+    </div>
+
+    <!-- SVG Shape -->
+    <figure class="position-absolute bottom-0 right-0 left-0">
+      <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1921 273">
+        <polygon fill="#fff" points="0,273 1921,273 1921,0 "/>
+      </svg>
+    </figure>
+    <!-- End SVG Shape -->
+  </div>
+  <!-- End Hero Section -->
+
+  <!-- Contact Form Section -->
+  <div class="container space-bottom-1 space-bottom-lg-2">
+    <!-- <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
+      <h2 id="contact-form">What can we do for you?</h2>
+      <p>Whether you have questions or you would just like to say hello, contact us.</p>
+    </div> -->
+
+    <div class="w-lg-80 mx-auto">
+      <!-- Contacts Form -->
+      <form id="contact-form" class="" action="https://api.slapform.com/{{ site.contact.email-support }}" method="post">
+      <!-- <form id="contact-form" class="" action="http://localhost:5001/slapform/us-central1/submission/{{ site.contact.email-support }}" method="post"> -->
+        <div class="row">
+
+          <input type="text" class="form-control" name="uid" hidden>
+          <input type="text" class="form-control" name="slap_subject" value="Operst Contact Form [{slap_meta_date_unix}]" hidden>
+
+          <!-- Input -->
+          <div class="col-sm-6 mb-4">
+            <div class="js-form-message">
+              <label class="input-label">Your name</label>
+              <input type="text" class="form-control" name="name" placeholder="Jon Snow" aria-label="Jon Snow" required>
+            </div>
+          </div>
+          <!-- End Input -->
+
+          <!-- Input -->
+          <div class="col-sm-6 mb-4">
+            <div class="js-form-message">
+              <label class="input-label">Your email address</label>
+              <input type="email" class="form-control" name="slap_replyto" placeholder="jonsnow@gmail.com" aria-label="jonsnow@gmail.com" required>
+            </div>
+          </div>
+          <!-- End Input -->
+
+          <div class="w-100"></div>
+
+          <div class="col-12 mb-4">
+            <label class="input-label" for="reason">Select Reason</label>
+            <select name="reason" id="reason" class="form-control" required>
+              <option value="">Select Reason</option>
+              <option value="tech_support">Tech support</option>
+              <option value="billing">Billing</option>
+              <option value="guest_posting">Guest posting/publishing</option>
+              <option value="advertising">Advertising</option>
+              <option value="brand_deal">Brand deal</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+        </div>
+
+        <!-- Input -->
+        <div class="js-form-message mb-6">
+          <label class="input-label">How can we help you? Please be detailed.</label>
+          <div class="input-group">
+            <textarea class="form-control" rows="4" name="message" placeholder="Hi there, I would like to ..." aria-label="Hi there, I would like to ..." required></textarea>
+          </div>
+        </div>
+        <!-- End Input -->
+
+        <div class="text-center">
+          <button id="submit-button" type="submit" class="btn btn-primary btn-wide transition-3d-hover mb-4 disabled" disabled>Submit</button>
+          <p class="small">We'll get back to you in a few business days!</p>
+        </div>
+      </form>
+      <!-- End Contacts Form -->
+    </div>
+  </div>
+  <!-- End Contact Form Section -->
+
+</main>
+<!-- ========== END MAIN ========== -->
+
+<script type="text/javascript">
+  Manager.auth().ready(function () {
+    var user = firebase.auth().currentUser;
+    var submitBtn = Manager.dom().select('#submit-button');
+    Manager.dom().select('input[name="uid"]').setValue(user ? user.uid : '');
+    submitBtn.removeAttribute('disabled').removeClass('disabled')
+    Manager.dom().select('#contact-form').on('submit', function (event) {
+      submitBtn.setAttribute('disabled', true).addClass('disabled')
+    })
+  })
+</script>

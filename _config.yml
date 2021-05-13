@@ -21,8 +21,8 @@ baseurl: "" # the subpath of your site, e.g. /blog
 # Custom Configuration
 version: '1.0.0'
 meta:
-  title: "Default title"
-  description: "Default description"
+  title: "Operst Agency"
+  description: "Digital marketing agency"
   og-image: "https://cdn.itwcreativeworks.com/assets/itw-creative-works/images/socials/itw-creative-works-brandmark-black-1024x1024.png"
   keywords: "" # false or blank to disable, comma separated kws
   viewport: "" # string, leave blank to use default
@@ -44,7 +44,7 @@ comments:
   disqus: "" # string, example: somiibo
 
 tracking:
-  google-analytics: false # false to disable, example: UA-123456789
+  google-analytics: UA-196943941-1 # false to disable, example: UA-123456789
   facebook-pixel: false # false to disable, example: fbp-123456789
 
 advertising:
@@ -57,8 +57,8 @@ email-marketing: # Get this information from Mailchimp > Audience > Manage Audie
   mailchimp-list-id: "" # string, example: b3456e5ffd
 
 contact:
-  email-support: "support@example.com" #string, example: support@example.com
-  email-business: "hello@example.com" #string, example: hello@example.com
+  email-support: "info@operst.com" #string, example: support@example.com
+  email-business: "info@operst.com" #string, example: hello@example.com
 
 brand:
   name: "Ultimate Jekyll" # example: Google
@@ -85,7 +85,7 @@ schema:
   sitelinks: true # true | false
 
 favicon:
-  path: "" # example: /assets/images/favicon
+  path: "https://cdn.itwcreativeworks.com/assets/operst/images/favicon" # example: /assets/images/favicon
   safari-pinned-tab: "#5bbad5" # example: #5bbad5
   msapp-tile-color: "#da532c" # example: #da532c"
   theme-color: "#ffffff" # example: #ffffff
@@ -115,31 +115,42 @@ settings:
         firebase_app: {
           enabled: true,
           config: {
-            apiKey: 'AIzaSyDzy5BG9-i9RmymyFx6mfwSgaRioyfa0Cc',
-            authDomain: 'ultimate-jekyll.firebaseapp.com',
-            databaseURL: 'https://ultimate-jekyll.firebaseio.com',
-            projectId: 'ultimate-jekyll',
-            storageBucket: 'ultimate-jekyll.appspot.com',
-            messagingSenderId: '837186164890',
-            appId: '1:837186164890:web:f1f59569d661078c',
-            measurementId: ''
+            apiKey: 'AIzaSyDPhZoC4ZjNcphXleAWjXMjZh6SL8ZXC4U',
+            authDomain: 'operst.firebaseapp.com',
+            projectId: 'operst',
+            storageBucket: 'operst.appspot.com',
+            messagingSenderId: '494402660853',
+            appId: '1:494402660853:web:70c1fe2ad757ca8691d8bc',
+            measurementId: 'G-GV28NGWSNW'
           }
         },
         cookieconsent: {
           enabled: true,
-          config: {}
+          config: {
+            palette: {
+              popup: {
+                background: '#161C29',
+                text: '#fff'
+              },
+              button: {
+                background: '#fff',
+                text: '#161C29'
+              }
+            }
+          }
         },
         tawk: {
           enabled: true,
           config: {
-            chatId: '5df1636b43be710e1d21af38'
+            chatId: '',
+            prechatColor: '#161C29'
           }
         },
         sentry: {
           enabled: true,
           config: {
             dsn: '',
-            release: 'ultimate-jekyll-website'
+            release: 'operst-website'
           }
         }
       }

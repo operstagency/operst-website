@@ -1,0 +1,20 @@
+// user-variables.scss
+// Use this to overwrite Bootstrap and Front variables
+//
+
+
+// Example of a variable override to change Front's primary color and font size
+// Remove the "//" to comment it in and see it in action!
+// $primary: $red;
+// $font-size-base: .875rem;
+
+
+
+// The color of the SVG loader should be modified manually.
+// See assets/svg/components/circle-preloader.svg
+// $blue: #1FB7F2;
+// $primary: #1FB7F2;
+// $blue: #000;
+// $primary: #000;
+$blue: #161C29;
+$primary: #161C29;

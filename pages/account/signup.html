@@ -1,0 +1,122 @@
+---
+### ALL PAGES ###
+layout: app/global/authentication
+permalink: /signup/
+
+### REGULAR PAGES ###
+meta:
+  title: "Sign Up Free - Operst"
+  description: "Sign up for free and spend less time marketing and more time doing what you love."
+  breadcrumb: "Sig up"
+
+settings:
+  manager-configuration: "
+  {
+    auth: {
+      state: 'prohibited'
+    }
+  }
+  "
+---
+<form class="js-validate" onsubmit="return false;">
+  <!-- Title -->
+  <div class="mb-3">
+    <h1 class="h2">Welcome to Operst</h1>
+    <p>Sign up to get started.</p>
+  </div>
+  <!-- End Title -->
+
+  <div class="row">
+    <div class="col-12 mb-1">
+      <a class="btn btn-sm btn-white transition-3d-hover btn-block auth-signin-provider-btn" data-provider="google.com">
+        <img src="https://cdn.itwcreativeworks.com/assets/general/images/brands/color/google.svg" class="lazyload" alt="Google Logo" width="24em">
+        Sign in with Google
+      </a>
+    </div>
+    <div class="col-12 mb-1">
+      <a class="btn btn-sm btn-white transition-3d-hover btn-block auth-signin-provider-btn" data-provider="microsoft.com">
+        <img src="https://cdn.itwcreativeworks.com/assets/general/images/brands/color/microsoft.svg" class="lazyload" alt="Microsoft Logo" width="24em">
+        Sign in with Microsoft
+      </a>
+    </div>
+    <div class="col-12 mb-1">
+      <a class="btn btn-sm btn-white transition-3d-hover btn-block auth-signin-provider-btn" data-provider="apple.com">
+        <img src="https://cdn.itwcreativeworks.com/assets/general/images/brands/color/apple.svg" class="lazyload" alt="Apple Logo" width="24em">
+        Sign in with Apple
+      </a>
+    </div>
+    <!-- <div class="col-12 mb-1">
+      <a class="btn btn-sm btn-white transition-3d-hover btn-block auth-signin-provider-btn" data-provider="yahoo.com">
+        <img src="https://cdn.itwcreativeworks.com/assets/general/images/brands/color/yahoo-y.svg" class="lazyload" alt="Yahoo Logo" width="24em">
+        Sign in with Yahoo
+      </a>
+    </div> -->
+  </div>
+
+  <div class="my-3 text-center text-muted">
+    <small>— or —</small>
+  </div>
+
+  <!-- Form Group -->
+  <div class="js-form-message form-group">
+    <label class="input-label" for="authentication-email">Email</label>
+    <input type="email" class="form-control auth-email-input" name="email" id="authentication-email" placeholder="jonsnow@gmail.com" aria-label="Email address" required autocomplete="email" autofocus>
+  </div>
+  <!-- End Form Group -->
+
+  <!-- Form Group -->
+  <div class="js-form-message form-group">
+    <label class="input-label" for="authentication-password">Password</label>
+    <input type="password" class="form-control auth-password-input" name="password" id="authentication-password" placeholder="********" aria-label="********" required autocomplete="new-password">
+  </div>
+  <!-- End Form Group -->
+
+  <!-- Form Group -->
+  <div class="js-form-message form-group">
+    <label class="input-label" for="authentication-password-confirm">Confirm password</label>
+    <input type="password" class="form-control auth-password-confirm-input" name="password-confirm" id="authentication-password-confirm" placeholder="********" aria-label="********" required autocomplete="new-password">
+  </div>
+  <!-- End Form Group -->
+
+  <!-- Checkbox -->
+  <div class="js-form-message mb-3">
+    <div class="custom-control custom-checkbox d-flex align-items-center text-muted">
+      <input type="checkbox" class="custom-control-input auth-newsletter-input" id="authentication-newsletter" name="newsletter">
+      <label class="custom-control-label" for="authentication-newsletter">
+        <small>
+          I agree to sign up for account promotions and receive marketing newsletters. Learn more in our <a class="link-underline" href="{{ site.url }}/privacy">Privacy Policy</a>.
+        </small>
+      </label>
+    </div>
+  </div>
+  <div class="js-form-message mb-3">
+    <div class="custom-control custom-checkbox d-flex align-items-center text-muted">
+      <input type="checkbox" class="custom-control-input auth-terms-input" id="authentication-terms" name="terms" required>
+      <label class="custom-control-label" for="authentication-terms">
+        <small>
+          I agree to the <a class="link-underline" href="{{ site.url }}/terms">Terms & Conditions</a>
+        </small>
+      </label>
+    </div>
+  </div>
+  <!-- End Checkbox -->
+
+  <div class="alert alert-danger auth-error-message-element" hidden>
+  </div>
+
+  <!-- Button -->
+  <div class="row align-items-center mb-5">
+    <div class="col-sm-8 mb-3 mb-sm-0">
+      <span class="font-size-1 text-muted">Already have an account?</span>
+      <a class="font-size-1 font-weight-bold" href="{{ site.url }}/signin">Signin</a>
+
+      <!-- <span class="font-size-1 text-muted">Forgot your password?</span> -->
+      <!-- <a class="font-size-1 font-weight-bold" href="{{ site.url }}/forgot">Reset it</a> -->
+    </div>
+
+    <div class="col-sm-4 text-sm-right">
+      <button type="submit" class="btn btn-primary transition-3d-hover auth-signup-email-btn">Sign up</button>
+    </div>
+  </div>
+  <!-- End Button -->
+</form>

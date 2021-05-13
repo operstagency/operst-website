@@ -1,0 +1,92 @@
+---
+### ALL PAGES ###
+layout: app/global/authentication
+permalink: /signin/
+
+### REGULAR PAGES ###
+meta:
+  title: "Sign In Free - Operst"
+  description: "Sign in to your Operst account to start botting and getting followers on Instagram, SoundCloud, Twitter, TikTok, Spotify and more."
+  breadcrumb: "Signin"
+
+settings:
+  manager-configuration: "
+  {
+    auth: {
+      state: 'prohibited'
+    }
+  }
+  "
+---
+<form class="js-validate" onsubmit="return false;">
+  <!-- Title -->
+  <div class="mb-3">
+    <h1 class="h2">Welcome Back to Operst</h1>
+    <p>Sign in to get started.</p>
+  </div>
+  <!-- End Title -->
+
+  <div class="row">
+    <div class="col-12 mb-1">
+      <a class="btn btn-sm btn-white transition-3d-hover btn-block auth-signin-provider-btn" data-provider="google.com">
+        <img src="https://cdn.itwcreativeworks.com/assets/general/images/brands/color/google.svg" class="lazyload" alt="Google Logo" width="24em">
+        Sign in with Google
+      </a>
+    </div>
+    <div class="col-12 mb-1">
+      <a class="btn btn-sm btn-white transition-3d-hover btn-block auth-signin-provider-btn" data-provider="microsoft.com">
+        <img src="https://cdn.itwcreativeworks.com/assets/general/images/brands/color/microsoft.svg" class="lazyload" alt="Microsoft Logo" width="24em">
+        Sign in with Microsoft
+      </a>
+    </div>
+    <div class="col-12 mb-1">
+      <a class="btn btn-sm btn-white transition-3d-hover btn-block auth-signin-provider-btn" data-provider="apple.com">
+        <img src="https://cdn.itwcreativeworks.com/assets/general/images/brands/color/apple.svg" class="lazyload" alt="Apple Logo" width="24em">
+        Sign in with Apple
+      </a>
+    </div>
+    <!-- <div class="col-12 mb-1">
+      <a class="btn btn-sm btn-white transition-3d-hover btn-block auth-signin-provider-btn" data-provider="yahoo.com">
+        <img src="https://cdn.itwcreativeworks.com/assets/general/images/brands/color/yahoo-y.svg" class="lazyload" alt="Yahoo Logo" width="24em">
+        Sign in with Yahoo
+      </a>
+    </div>     -->
+  </div>
+
+  <div class="my-3 text-center text-muted">
+    <small>— or —</small>
+  </div>
+
+  <!-- Form Group -->
+  <div class="js-form-message form-group">
+    <label class="input-label" for="authentication-email">Email</label>
+    <input type="email" class="form-control auth-email-input" name="email" id="authentication-email" placeholder="jonsnow@gmail.com" aria-label="Email address" required autocomplete="email" autofocus>
+  </div>
+  <!-- End Form Group -->
+
+  <!-- Form Group -->
+  <div class="js-form-message form-group">
+    <label class="input-label" for="authentication-password">Password</label>
+    <input type="password" class="form-control auth-password-input" name="password" id="authentication-password" placeholder="********" aria-label="********" required autocomplete="password">
+  </div>
+  <!-- End Form Group -->
+
+  <div class="alert alert-danger auth-error-message-element" hidden>
+  </div>
+
+  <!-- Button -->
+  <div class="row align-items-center mb-5">
+    <div class="col-sm-8 mb-3 mb-sm-0">
+      <span class="font-size-1 text-muted">Don't have an account?</span>
+      <a class="font-size-1 font-weight-bold" href="{{ site.url }}/signup">Create one</a>
+      <br>
+      <span class="font-size-1 text-muted">Forgot your password?</span>
+      <a class="font-size-1 font-weight-bold" href="{{ site.url }}/forgot">Reset it</a>
+    </div>
+
+    <div class="col-sm-4 text-sm-right">
+      <button type="submit" class="btn btn-primary transition-3d-hover auth-signin-email-btn">Sign in</button>
+    </div>
+  </div>
+  <!-- End Button -->
+</form>
