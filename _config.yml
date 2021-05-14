@@ -22,8 +22,8 @@ baseurl: "" # the subpath of your site, e.g. /blog
 version: '1.0.0'
 meta:
   title: "Operst Agency"
-  description: "Digital marketing agency"
-  og-image: "https://cdn.itwcreativeworks.com/assets/itw-creative-works/images/socials/itw-creative-works-brandmark-black-1024x1024.png"
+  description: "A digital marketing agency that will maximize your ROAS, grow your business, and increase your bottom line."
+  og-image: "https://cdn.itwcreativeworks.com/assets/operst/images/logo/operst-brandmark-black-1024x1024.png"
   keywords: "" # false or blank to disable, comma separated kws
   viewport: "" # string, leave blank to use default
 
@@ -61,11 +61,11 @@ contact:
   email-business: "info@operst.com" #string, example: hello@example.com
 
 brand:
-  name: "Ultimate Jekyll" # example: Google
+  name: "Operst Agency" # example: Google
   type: "Corporation" # example: Corporation
-  description: "Default description." # example: A search engine company.
-  logo-image: "https://cdn.itwcreativeworks.com/assets/itw-creative-works/images/socials/itw-creative-works-brandmark-black-1024x1024.png" # URL | LOCAL path, example: https://defaultogimage.com, /assets/img/og/og.png
-  logo-image-svg: "https://cdn.itwcreativeworks.com/assets/itw-creative-works/images/logo/itw-creative-works-brandmark-black-x.svg" # URL | LOCAL path, example: https://defaultogimage.com, /assets/img/og/og.svg
+  description: "A digital marketing agency that will maximize your ROAS, grow your business, and increase your bottom line." # example: A search engine company.
+  logo-image: "https://cdn.itwcreativeworks.com/assets/operst/images/logo/operst-brandmark-black-1024x1024.png" # URL | LOCAL path, example: https://defaultogimage.com, /assets/img/og/og.png
+  logo-image-svg: "https://cdn.itwcreativeworks.com/assets/operst/images/logo/operst-wordmark-black-x.svg" # URL | LOCAL path, example: https://defaultogimage.com, /assets/img/og/og.svg
   address-locality: "Los Angeles" # String | example: Los Angeles
   address-country: "United States" # String | example: United States
 
