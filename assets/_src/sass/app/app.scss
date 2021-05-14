@@ -37,3 +37,15 @@
   margin-right: .3125rem;
   font-weight: bold;
 }
+
+nav .dropdown-item:hover {
+  text-decoration: underline;
+}
+
+.bg-somiibo-blue {
+  background-color: #1FB7F2 !important;
+}
+
+.bg-soft-somiibo-blue {
+  background-color: rgba(31,183,242,0.1);
+}

@@ -142,7 +142,7 @@ settings:
         tawk: {
           enabled: true,
           config: {
-            chatId: '',
+            chatId: '609ea585185beb22b30d49fb',
             prechatColor: '#161C29'
           }
         },
