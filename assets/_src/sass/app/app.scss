@@ -13,8 +13,13 @@
 */
 // @import 'node_modules/bootstrap/scss/bootstrap.scss';
 
+// @import 'assets/_src-uncompiled/vendor/slick-carousel/slick/slick.css';
+// @import '/assets/_src-uncompiled/vendor/slick-carousel/slick/slick.css';
+// @import '../../../_src-uncompiled/vendor/slick-carousel/slick/slick.css';
+// @import '../../vendor/slick-carousel/slick/slick.css';
+// @import '../../vendor/slick-carousel/slick/slick.css';
+// @import '/assets/vendor/slick-carousel/slick/slick.css';
 @import '../theme/theme.scss';
-
 
 .nav-account-dropdown {
   position: relative;
