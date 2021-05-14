@@ -143,6 +143,7 @@ settings:
           enabled: true,
           config: {
             chatId: '609ea585185beb22b30d49fb',
+            widgetId: '1f5lrd4j1',
             prechatColor: '#161C29'
           }
         },
