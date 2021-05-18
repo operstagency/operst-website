@@ -5,6 +5,9 @@ layout: master/global/default
 ### REGULAR PAGES ###
 ---
 
+{% assign service-name-short = page.service.name-short | default: page.service.name %}
+{% capture service-onboarding-url %}{{ site.url }}/onboarding?service={{ page.name | replace: ".md", "" }}{% endcapture %}
+
 <!-- ========== MAIN ========== -->
 <main id="content" role="main">
   <!-- Hero Section -->
@@ -33,219 +36,161 @@ layout: master/global/default
     <!-- End SVG Shapes -->
   </div>
 
-  <!-- Content Section -->
-  <div class="container space-2 space-lg-0">
-    <div class="pl-lg-4">
+  <div class="container space-bottom-1 space-bottom-lg-1"></div>
 
-      {% assign platform-video = "m4XZMI5Xdng" %}
-
-      <div class="">
-      </div>
-
-      {% if platform-video != null %}
-        <div class="">
-          <!-- Title -->
-          <div class="text-center mx-md-auto">
-            <span class="d-block small font-weight-bold text-cap mb-2">{{ page.service.name }} in action</span>
-
-            {% if page.service.heading-sub != null %}
-              <h2>{{ page.service.heading-sub }}</h2>
-            {% else %}
-              <h2 class="h3">Somiibo is the best tool to grow your {{ page.service.name }}</h2>
-            {% endif %}
-
-            <p class="">{{ page.meta.description }}</p>
-
-          </div>
-          <!-- End Title -->
-
-          <!-- Icon Blocks -->
-          <div class="row my-5">
-            <div class="col-12">
-              <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{ platform-video }}"></iframe>
-              </div>
-
-              <div class="mt-5 text-center">
-                <!-- <a class="btn btn-sm btn-soft-primary btn-wide transition-3d-hover" href="{{ site.url }}/signup">Signup for free</a> -->
-                <!-- <small class="d-block d-sm-inline-block text-white-70 my-3 my-sm-0 mx-sm-3">or</small> -->
-                <!-- <a class="btn btn-sm btn-primary btn-wide transition-3d-hover" href="{{ site.url }}/download">Get started for free</a> -->
-              </div>
-
-            </div>
-          </div>
-          <!-- <hr> -->
-        </div>
-      {% endif %}
-
-      {% if platform-video == null %}
-        <!-- Title -->
-        <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
-          <span class="d-block small font-weight-bold text-cap mb-2">Why Somiibo</span>
-          <h2>Grow with our {{ page.service.name }} bot</h2>
-        </div>
-        <!-- End Title -->
-      {% endif %}
-
-      <!-- Icon Blocks -->
-      <div class="row mb-5 mb-md-9">
-        <div class="col-sm-6 col-md-4 mb-3 mb-sm-7">
-          <!-- Icon Block -->
-          <div class="media align-items-center mb-2">
-            <figure class="w-100 max-w-6rem mr-3">
-              <img class="img-fluid" src="/assets/svg/icons/icon-29.svg" alt="SVG">
-            </figure>
-            <div class="media-body">
-              <h4 class="mb-0">Speed and Efficiency</h4>
-            </div>
-          </div>
-          <p>
-            Somiibo earns {{ page.service.name }}
-
-            {% for stat in page.service.stats %}
-              {% if forloop.last == true %}
-                & {{ stat }}
-              {% else %}
-                {{ stat }},
-              {% endif %}
-            {% endfor %}
-            quickly without compromising efficiency.
-          </p>
-          <!-- End Icon Block -->
-        </div>
-
-        <div class="col-sm-6 col-md-4 mb-3 mb-sm-7">
-          <!-- Icon Block -->
-          <div class="media align-items-center mb-2">
-            <figure class="w-100 max-w-6rem mr-3">
-              <img class="img-fluid" src="/assets/svg/icons/icon-44.svg" alt="SVG">
-            </figure>
-            <div class="media-body">
-              <h4 class="mb-0">Safety</h4>
-            </div>
-          </div>
-          <p>This Module uses browser trusted user-input events. {{ page.service.name }} thinks a <strong>real user</strong> is navigating the site and interacting with content.</p>
-          <!-- End Icon Block -->
-        </div>
-
-        <div class="col-sm-6 col-md-4 mb-3 mb-sm-7 mb-md-0">
-          <!-- Icon Block -->
-          <div class="media align-items-center mb-2">
-            <figure class="w-100 max-w-6rem mr-3">
-              <img class="img-fluid" src="/assets/svg/icons/icon-2.svg" alt="SVG">
-            </figure>
-            <div class="media-body">
-              <h4 class="mb-0">Multiple Accounts</h4>
-            </div>
-          </div>
-          <p>You can automate multiple {{ page.service.name }} accounts with Somiibo. Each {{ page.service.name }} Module can have its own settings and breaks!</p>
-          <!-- End Icon Block -->
-        </div>
-
-        <div class="col-sm-6 col-md-4 mb-3 mb-sm-7 mb-md-0">
-          <!-- Icon Block -->
-          <div class="media align-items-center mb-2">
-            <figure class="w-100 max-w-6rem mr-3">
-              <img class="img-fluid" src="/assets/svg/icons/icon-37.svg" alt="SVG">
-            </figure>
-            <div class="media-body">
-              <h4 class="mb-0">Proxy Support</h4>
-            </div>
-          </div>
-          <p>You can assign each {{ page.service.name }} Module instance a different proxy. {{ page.service.name }} will never know you run multiple accounts.</p>
-          <!-- End Icon Block -->
-        </div>
-
-        <div class="col-sm-6 col-md-4 mb-3 mb-sm-7 mb-md-0">
-          <!-- Icon Block -->
-          <div class="media align-items-center mb-2">
-            <figure class="w-100 max-w-6rem mr-3">
-              <img class="img-fluid" src="/assets/svg/icons/icon-5.svg" alt="SVG">
-            </figure>
-            <div class="media-body">
-              <h4 class="mb-0">Scheduling</h4>
-            </div>
-          </div>
-          <p>Set breaks and goals for each {{ page.service.name }} Module. You can control how long the Module runs for without babysitting it.</p>
-          <!-- End Icon Block -->
-        </div>
-
-        <div class="col-sm-6 col-md-4">
-          <!-- Icon Block -->
-          <div class="media align-items-center mb-2">
-            <figure class="w-100 max-w-6rem mr-3">
-              <img class="img-fluid" src="/assets/svg/icons/icon-28.svg" alt="SVG">
-            </figure>
-            <div class="media-body">
-              <h4 class="mb-0">Multiple Modules</h4>
-            </div>
-          </div>
-          <p>Somiibo offers multiple Modules for {{ page.service.name }}, each with its own purpose. Mix and match them to customize your social media marketing.</p>
-          <!-- End Icon Block -->
-        </div>
-      </div>
-      <!-- End Icon Blocks -->
-
-      <div class="text-center mb-9">
-        <div class="mb-3">
-          <a class="btn btn-primary btn-wide transition-3d-hover mb-2 mb-sm-0 mx-1" href="{{ site.url }}/signup">Sign up free</a>
-          <a class="btn btn-link mb-2 mb-sm-0 mx-1" href="{{ site.url }}/download">Start automating {{ page.service.name }} <i class="fas fa-angle-right fa-sm ml-1"></i></a>
-        </div>
-
-        <p class="small">Somiibo is free. No credit card required.</p>
-      </div>
-
-
-      <div class="">
-        <h3 class="h5">How do the Somiibo {{ page.service.name }} Automation Tools Work?</h3>
-        {{ content }}
-      </div>
+  <div id="aboutSection" class="container space-bottom-0">
+    <!-- Title -->
+    <div class="w-lg-65 text-center mx-auto mb-5 mb-sm-9">
+      <h2 class="h1">Why {{ page.service.name }}?</h2>
+      <p>{{ page.service.subheading }}.</p>
     </div>
-  </div>
-  <!-- End Content Section -->
+    <!-- End Title -->
 
-  <!-- Sticky Block End Point -->
-  <div id="stickyBlockEndPoint"></div>
+    <div class="row">
 
-  <!-- Testimonials -->
-  <div class="bg-light">
-    <div class="container space-1 space-md-2 space-lg-3">
-      <div class="w-lg-75 mx-lg-auto">
-        <!-- SVG Quote -->
-        <figure class="mx-auto text-center mb-3">
-          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px"
-             viewBox="0 0 8 8" style="enable-background:new 0 0 8 8;" xml:space="preserve">
-            <path fill="#377DFF" d="M3,1.3C2,1.7,1.2,2.7,1.2,3.6c0,0.2,0,0.4,0.1,0.5c0.2-0.2,0.5-0.3,0.9-0.3c0.8,0,1.5,0.6,1.5,1.5c0,0.9-0.7,1.5-1.5,1.5
-              C1.4,6.9,1,6.6,0.7,6.1C0.4,5.6,0.3,4.9,0.3,4.5c0-1.6,0.8-2.9,2.5-3.7L3,1.3z M7.1,1.3c-1,0.4-1.8,1.4-1.8,2.3
-              c0,0.2,0,0.4,0.1,0.5c0.2-0.2,0.5-0.3,0.9-0.3c0.8,0,1.5,0.6,1.5,1.5c0,0.9-0.7,1.5-1.5,1.5c-0.7,0-1.1-0.3-1.4-0.8
-              C4.4,5.6,4.4,4.9,4.4,4.5c0-1.6,0.8-2.9,2.5-3.7L7.1,1.3z"/>
+      {% for bullet in page.service.bullets %}
+        <div class="col-md-4 mb-7">
+          <!-- Icon Blocks -->
+          <div class="text-center px-lg-3">
+            <!-- <figure class="max-w-8rem mx-auto mb-4">
+              <img class="img-fluid" src="/assets/svg/icons/icon-45.svg" alt="SVG">
+            </figure> -->
+            <div class="max-w-8rem mx-auto mb-2">
+              <i class="fas fa-{{ bullet[2] }} fa-2x text-dark"></i>
+            </div>
+            <h3>{{ bullet[0] }}</h3>
+            <p>{{ bullet[1] }}</p>
+          </div>
+          <!-- End Icon Blocks -->
+        </div>
+      {% endfor %}
+
+    </div>
+
+    <img class="img-fluid d-none d-md-block w-75 mx-auto mb-0" src="/assets/svg/components/three-pointers.svg" alt="SVG Arrow">
+
+    <!-- Title -->
+    <div class="w-md-60 w-lg-50 text-center mx-auto mb-7">
+      <p class="text-dark"><span class="font-weight-bold">Operst can help.</span> Create your first and ongoing <strong>{{ service-name-short }} campaign</strong> with us.</p>
+    </div>
+    <!-- End Title -->
+
+    <!-- Browser Mockup -->
+    <div class="position-relative w-lg-75 mx-lg-auto mb-4" data-aos="fade-up">
+      <div class="mt-n5">
+        <figure>
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1109.8 797.1" transform="scale(1 0.8)">
+            <path fill="#f9fbff" d="M105.1,267.1C35.5,331.5-3.5,423,0.3,517.7C6.1,663,111,831.9,588.3,790.8c753-64.7,481.3-358.3,440.4-398.3c-4-3.9-7.9-7.9-11.7-12L761.9,104.8C639.4-27.6,432.5-35.6,299.9,87L105.1,267.1z"/>
           </svg>
         </figure>
-        <!-- End SVG Quote -->
 
-        <!-- Blockquote -->
-        <div class="text-center mb-5">
-          <blockquote class="h2 font-weight-normal">
-            Somiibo has been pretty straightforward and upfront about what it is they do and what they have on offer... they do appear to follow through on promises that they make about the quality of their services.
-          </blockquote>
+        <div class="device device-browser">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{ page.service.video }}"></iframe>
+          </div>
         </div>
-        <!-- End Blockquote -->
-
-        <!-- Reviewer -->
-        <div class="w-lg-50 text-center mx-lg-auto">
-          <h4 class="mb-0">Jonathon Spire</h4>
-          <small class="text-muted">Blogger @ <a href="https://jonathonspire.com/somiibo-review/" rel="nofollow" target="_blank">jonathonspire.com</a></small>
-        </div>
-        <!-- End Reviewer -->
       </div>
+      <!-- <div class="device device-browser">
+        <img class="img-fluid" src="/assets/svg/components/browser.svg" alt="Image Description">
+        <img class="device-browser-screen" src="/assets/images/screenshots/digital-marketing-analytics-1.jpg" alt="Image Description">
+      </div> -->
     </div>
-  </div>
-  <!-- Testimonials -->
+    <!-- End Browser Mockup -->
 
-  <div class="container space-top-2 space-top-lg-3 space-bottom-2 space-bottom-lg-3">
-    {% comment %}
-    {%- include /app/modules/call-to-action.html -%}
-    {% endcomment %}
+    <!-- <div class="w-50 w-md-40 w-lg-30 text-center mx-auto">
+      <p class="small">We are launching soon. Join the priority list for information and early access.</p>
+    </div> -->
+  </div>
+
+
+  <div id="pricingSection" class="container space-bottom-2 space-bottom-lg-3">
+    <!-- Title -->
+    <div class="w-lg-65 text-center mx-auto mb-5 mb-sm-9">
+      <h2 class="h1">Scalable {{ service-name-short }} packages</h2>
+      <p>Find the right package for your business.</p>
+    </div>
+    <!-- End Title -->
+
+    <div class="w-lg-75 mx-lg-auto">
+      <div class="row align-items-sm-end mx-n2 mb-5 mb-md-7">
+
+        {% for pricing in page.service.pricing %}
+          {% capture service-onboarding-url-inner %}{{ service-onboarding-url }}&package=tier-{{ forloop.index }}{% endcapture %}
+          {% if forloop.length == 1 %}
+            {% assign pricing-column = "col-sm-12 col-md-12" %}
+          {% elsif forloop.length == 2 %}
+            {% assign pricing-column = "col-6" %}
+          {% elsif forloop.length == 3 %}
+            {% assign pricing-column = "col-sm-6 col-md-4" %}
+          {% elsif forloop.length == 4 %}
+            {% assign pricing-column = "col-sm-6 col-md-3" %}
+          {% endif %}
+
+          {% if forloop.index == 1 %}
+            {% assign pricing-package-name = "Tier 1" %}
+            {% capture pricing-package-svg %}
+              <circle fill="#161c29" opacity=".85" cx="80" cy="80" r="48"/>
+            {% endcapture %}
+          {% elsif forloop.index == 2 %}
+            {% assign pricing-package-name = "Tier 2" %}
+            {% capture pricing-package-svg %}
+              <circle fill="#161c29" opacity=".85" cx="80" cy="80" r="48"/>
+              <circle fill="#161c29" opacity=".85" cx="112" cy="80" r="48"/>
+            {% endcapture %}
+          {% elsif forloop.index == 3 %}
+            {% assign pricing-package-name = "Tier 3" %}
+            {% capture pricing-package-svg %}
+              <circle fill="#161c29" opacity=".85" cx="48" cy="53" r="48"/>
+              <circle fill="#161c29" opacity=".85" cx="112" cy="53" r="48"/>
+              <circle fill="#161c29" opacity=".85" cx="81" cy="107" r="48"/>
+            {% endcapture %}
+          {% elsif forloop.index == 4 %}
+            {% assign pricing-package-name = "Tier 4" %}
+            {% capture pricing-package-svg %}
+              <circle fill="#161c29" opacity=".85" cx="48" cy="53" r="48"/>
+              <circle fill="#161c29" opacity=".85" cx="112" cy="53" r="48"/>
+              <circle fill="#161c29" opacity=".85" cx="81" cy="107" r="48"/>
+            {% endcapture %}
+          {% endif %}
+
+          <div class="{{ pricing-column }} px-2 mb-3 mb-md-0">
+            <!-- Pricing -->
+            <div class="card card-bordered shadow-none text-center" data-aos="fade-up" data-aos-delay="100">
+              <div class="card-body pb-2">
+                <figure class="text-center mb-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="60" height="60" viewBox="0 0 160 160">
+                    {{ pricing-package-svg }}
+                  </svg>
+                </figure>
+                <h4 class="font-size-2">{{ pricing-package-name }}</h4>
+                <!-- <span class="text-dark font-size-2 font-weight-bold">Free</span> -->
+              </div>
+              <div class="card-body pt-0 pb-5 px-5">
+                <ul class="list-unstyled list-sm-article mb-4">
+                  {% for feature in pricing %}
+                    <li>{{ feature }}</li>
+                  {% endfor %}
+                </ul>
+                <a class="btn btn-sm btn-block btn-soft-primary transition-3d-hover" href="{{ service-onboarding-url-inner }}">Contact us</a>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+
+      </div>
+
+      <!-- Link -->
+      <div class="text-center">
+        <a href="{{ service-onboarding-url }}&package=custom">
+          Contact us for
+          <span class="btn btn-xs btn-icon btn-soft-primary rounded-circle mx-2">
+            <i class="fas fa-angle-right"></i>
+          </span>
+          custom plans
+        </a>
+      </div>
+      <!-- End Link -->
+    </div>
   </div>
 
 </main>

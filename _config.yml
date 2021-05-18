@@ -31,11 +31,11 @@ cloudflare:
   zone: '282d4b5b8f71a0cb5f9ccae85b905a48'
 
 socials:
-  facebook: "" # string, example: somiibo
-  twitter: "" # string, example: somiibo
-  linkedin: "" # string, example: somiibo
+  facebook: "operstagency" # string, example: somiibo
+  twitter: "operstagency" # string, example: somiibo
+  linkedin: "operstagency" # string, example: somiibo
   youtube: "" # string, example: somiibo
-  instagram: "" # string, example: somiibo
+  instagram: "operstagency" # string, example: somiibo
   tumblr: "" # string, example: somiibo
   slack: "" # string, example: https://somiibo.slack.com
   discord-invite: "" # string, example: https://discord.gg/vkeZEqb
