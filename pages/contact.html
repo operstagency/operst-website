@@ -37,72 +37,138 @@ meta:
   </div>
 
   <!-- Contact Form Section -->
-  <div class="container space-bottom-1 space-bottom-lg-2">
+  <div class="container space-bottom-1 space-bottom-lg-1">
     <!-- <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
       <h2 id="contact-form">What can we do for you?</h2>
       <p>Whether you have questions or you would just like to say hello, contact us.</p>
     </div> -->
 
-    <div class="w-lg-80 mx-auto">
-      <!-- Contacts Form -->
-      <form id="contact-form" class="" action="https://api.slapform.com/{{ site.contact.email-support }}" method="post">
-      <!-- <form id="contact-form" class="" action="http://localhost:5001/slapform/us-central1/submission/{{ site.contact.email-support }}" method="post"> -->
+
+    <div class="row">
+      <div class="col-12 mt-4">
+
+        <!-- CTA Section -->
+        <!-- <div class="w-lg-85 mx-lg-auto"> -->
+        <div class="mx-lg-auto">
+          <div class="card bg-primary text-white overflow-hidden p-4">
+            <div class="row justify-content-md-start align-items-md-center text-center text-md-left">
+              <div class="col-md-6 offset-md-3 mb-3 mb-md-0">
+                <h3 class="text-white mb-1">Give us a call!</h3>
+                <p class="text-white-70 mb-0">We'd love to talk about how we can help you.</p>
+              </div>
+              <div class="col-md-3 text-md-right">
+                <a class="btn btn-light transition-3d-hover" href="tel:{{ site.contact.phone }}">{{ site.contact.phone }}</a>
+              </div>
+            </div>
+
+            <!-- SVG Component -->
+            <figure class="w-25 d-none d-md-block content-centered-y ml-n4">
+              <img class="img-fluid" src="/assets/svg/illustrations/communication.svg" alt="Image Description">
+            </figure>
+            <!-- End SVG Component -->
+          </div>
+        </div>
+        <!-- End CTA Section -->
+
+        <!-- <div class="mb-5">
+          <h1>Get in touch</h1>
+          <p>We'd love to talk about how we can help you.</p>
+        </div>
+
         <div class="row">
+          <div class="col-sm-6">
+            <div class="mb-3">
+              <span class="d-block h5 mb-1">Call us:</span>
+              <span class="d-block text-body font-size-1">+1 (062) 109-9222</span>
+            </div>
 
-          <input type="text" class="form-control" name="uid" hidden>
-          <input type="text" class="form-control" name="slap_subject" value="Operst Contact Form [{slap_meta_date_unix}]" hidden>
-
-          <!-- Input -->
-          <div class="col-sm-6 mb-4">
-            <div class="js-form-message">
-              <label class="input-label">Your name</label>
-              <input type="text" class="form-control" name="name" placeholder="Jon Snow" aria-label="Jon Snow" required>
+            <div class="mb-3">
+              <span class="d-block h5 mb-1">Email us:</span>
+              <span class="d-block text-body font-size-1">hello@example.com</span>
             </div>
           </div>
-          <!-- End Input -->
 
-          <!-- Input -->
-          <div class="col-sm-6 mb-4">
-            <div class="js-form-message">
-              <label class="input-label">Your email address</label>
-              <input type="email" class="form-control" name="slap_replyto" placeholder="jonsnow@gmail.com" aria-label="jonsnow@gmail.com" required>
+          <div class="col-sm-6">
+            <div class="mb-3">
+              <span class="d-block h5 mb-1">Address:</span>
+              <span class="d-block text-body font-size-1">153 Williamson Plaza, Maggieberg</span>
             </div>
           </div>
-          <!-- End Input -->
+        </div> -->
+      </div>
 
-          <div class="w-100"></div>
+      <div class="col-12">
+        <div class="my-3 text-center text-muted">
+            <small>— or —</small>
+          </div>
+      </div>
 
-          <div class="col-12 mb-4">
-            <label class="input-label" for="reason">Select Reason</label>
-            <select name="reason" id="reason" class="form-control" required>
-              <option value="">Select Reason</option>
-              <option value="social-media-advertising">Social Media Advertising</option>
-              <option value="seo-services">SEO Services</option>
-              <option value="pr-placements">PR Placements</option>
-              <option value="ppc-advertising">PPC Advertising</option>
-              <!-- <option value="brand_deal">Brand deal</option> -->
-              <option value="other">Other</option>
-            </select>
+      <div class="col-12">
+        <!-- Form -->
+        <form id="contact-form" class="js-validate card shadow-lg mb-4" onsubmit="return false;">
+          <div class="card-header border-0 bg-light text-center py-4 px-4 px-md-6">
+            <h2 class="h4 mb-0">Send us a request</h2>
           </div>
 
-        </div>
+          <div class="card-body p-4 p-md-6">
+            <div class="row">
 
-        <!-- Input -->
-        <div class="js-form-message mb-6">
-          <label class="input-label">How can we help you? Please be detailed.</label>
-          <div class="input-group">
-            <textarea class="form-control" rows="4" name="message" placeholder="Hi there, I would like to ..." aria-label="Hi there, I would like to ..." required></textarea>
+              <input type="text" class="form-control" name="uid" hidden>
+              <input type="text" class="form-control" name="slap_subject" value="Operst Contact Form [{slap_meta_date_unix}]" hidden>
+
+              <!-- Input -->
+              <div class="col-sm-6 mb-4">
+                <div class="js-form-message">
+                  <label class="input-label">Your name</label>
+                  <input type="text" class="form-control" name="name" placeholder="Jon Snow" aria-label="Jon Snow" required>
+                </div>
+              </div>
+              <!-- End Input -->
+
+              <!-- Input -->
+              <div class="col-sm-6 mb-4">
+                <div class="js-form-message">
+                  <label class="input-label">Your email address</label>
+                  <input type="email" class="form-control" name="slap_replyto" placeholder="jonsnow@gmail.com" aria-label="jonsnow@gmail.com" required>
+                </div>
+              </div>
+              <!-- End Input -->
+
+              <div class="w-100"></div>
+
+              <div class="col-12 mb-4">
+                <label class="input-label" for="reason">Select Reason</label>
+                <select name="reason" id="reason" class="form-control" required>
+                  <option value="">Select Reason</option>
+                  <option value="social-media-advertising">Social Media Advertising</option>
+                  <option value="seo-services">SEO Services</option>
+                  <option value="pr-placements">PR Placements</option>
+                  <option value="ppc-advertising">PPC Advertising</option>
+                  <!-- <option value="brand_deal">Brand deal</option> -->
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+            </div>
+
+            <div class="js-form-message mb-6">
+              <label class="input-label">How can we help you? Please be detailed.</label>
+              <div class="input-group">
+                <textarea class="form-control" rows="4" name="message" placeholder="Hi there, I would like to ..." aria-label="Hi there, I would like to ..." required></textarea>
+              </div>
+            </div>
+
+            <button id="submit-button" type="submit" class="btn btn-block btn-primary transition-3d-hover">Submit</button>
           </div>
-        </div>
-        <!-- End Input -->
+        </form>
+        <!-- End Form -->
 
         <div class="text-center">
-          <button id="submit-button" type="submit" class="btn btn-primary btn-wide transition-3d-hover mb-4 disabled" disabled>Submit</button>
-          <p class="small">We'll get back to you in a few business days!</p>
+          <p class="small">We'll get back to you in 1-2 business days.</p>
         </div>
-      </form>
-      <!-- End Contacts Form -->
+      </div>
     </div>
+
   </div>
   <!-- End Contact Form Section -->
 
@@ -110,13 +176,18 @@ meta:
 <!-- ========== END MAIN ========== -->
 
 <script type="text/javascript">
-  Manager.auth().ready(function () {
-    var user = firebase.auth().currentUser;
-    var submitBtn = Manager.dom().select('#submit-button');
-    Manager.dom().select('input[name="uid"]').setValue(user ? user.uid : '');
-    submitBtn.removeAttribute('disabled').removeClass('disabled')
-    Manager.dom().select('#contact-form').on('submit', function (event) {
-      submitBtn.setAttribute('disabled', true).addClass('disabled')
-    })
-  })
+  // Manager.auth().ready(function () {
+  //   var user = firebase.auth().currentUser;
+  //   var submitBtn = Manager.dom().select('#submit-button');
+  //   Manager.dom().select('input[name="uid"]').setValue(user ? user.uid : '');
+  //   submitBtn.removeAttribute('disabled').removeClass('disabled')
+  //   Manager.dom().select('#contact-form').on('submit', function (event) {
+  //     submitBtn.setAttribute('disabled', true).addClass('disabled')
+  //   })
+  //
+  //   Manager.dom().select('#contact-form').on('submit', function (event) {
+  //     console.log('----EVENT', event);
+  //   })
+  //
+  // })
 </script>

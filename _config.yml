@@ -59,6 +59,7 @@ email-marketing: # Get this information from Mailchimp > Audience > Manage Audie
 contact:
   email-support: "info@operst.com" #string, example: support@example.com
   email-business: "info@operst.com" #string, example: hello@example.com
+  phone: "+1 (310) 667 - 8999"
 
 brand:
   name: "Operst Agency" # example: Google

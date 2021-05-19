@@ -13,8 +13,8 @@ meta:
 service:
   name: "Social Media Advertising"
   name-short: ""
-  heading: "Maximize your brand’s visibility and boost user engagement"
-  subheading: "Attract <strong>engagement</strong> and, ultimately, <strong>drives sales</strong>"
+  heading: "Maximize your brand's visibility and boost user engagement."
+  subheading: "Attract <strong>engagement</strong> and, ultimately, <strong>drives sales</strong>."
   color: "somiibo-blue"
   icon: "thumbs-up"
   video: "zz4wU11qOks"
@@ -50,12 +50,4 @@ service:
       - "video"
       - "YouLikeHits Points"
       - "This YouLikeHits point bot performs actions on YouLikeHits to earn tons of points for you. Use your points to get followers, likes, and plays on any social media platform."
-  # video: "1giAoYe3Mgw"
 ---
-Somiibo is a premium free YouLikeHits bot and growth service that earns you unlimited free YouLikeHits points. Stop wasting your time! With these free YouLikeHits points you can get free followers on Instagram, more SoundCloud followers, never ending followers on Twitter, and unlimited Facebook likes!
-
-Somiibo YouLikeHits point tool includes the following modes of earning points, choose whatever mode you want!
-
-- Listen to SoundCloud tracks, follow artists, and like tracks
-- Follow Twitter users, retweet posts, and like tweets
-- Watch videos on YouTube, subscribe to channels, and like videos
