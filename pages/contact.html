@@ -136,7 +136,14 @@ meta:
 
               <div class="w-100"></div>
 
-              <div class="col-12 mb-4">
+              <div class="col-sm-6 mb-4">
+                <div class="js-form-message">
+                  <label class="input-label">Phone</label>
+                  <input type="tel" class="form-control" name="phone" placeholder="(310) 555-5555" aria-label="(310) 555-5555" required>
+                </div>
+              </div>
+
+              <div class="col-6 mb-4">
                 <label class="input-label" for="reason">Select Reason</label>
                 <select name="reason" id="reason" class="form-control" required>
                   <option value="">Select Reason</option>
@@ -152,10 +159,14 @@ meta:
             </div>
 
             <div class="js-form-message mb-6">
-              <label class="input-label">How can we help you? Please be detailed.</label>
+              <label class="input-label">How can we help you?</label>
               <div class="input-group">
                 <textarea class="form-control" rows="4" name="message" placeholder="Hi there, I would like to ..." aria-label="Hi there, I would like to ..." required></textarea>
               </div>
+            </div>
+
+            <div id="alert-parent" class="alert" role="alert">
+
             </div>
 
             <button id="submit-button" type="submit" class="btn btn-block btn-primary transition-3d-hover">Submit</button>
@@ -174,20 +185,45 @@ meta:
 
 </main>
 <!-- ========== END MAIN ========== -->
+<script src="https://cdn.jsdelivr.net/npm/slapform@latest/dist/index.min.js"></script>
 
 <script type="text/javascript">
-  // Manager.auth().ready(function () {
-  //   var user = firebase.auth().currentUser;
-  //   var submitBtn = Manager.dom().select('#submit-button');
-  //   Manager.dom().select('input[name="uid"]').setValue(user ? user.uid : '');
-  //   submitBtn.removeAttribute('disabled').removeClass('disabled')
-  //   Manager.dom().select('#contact-form').on('submit', function (event) {
-  //     submitBtn.setAttribute('disabled', true).addClass('disabled')
-  //   })
-  //
-  //   Manager.dom().select('#contact-form').on('submit', function (event) {
-  //     console.log('----EVENT', event);
-  //   })
-  //
-  // })
+  Manager.auth().ready(function () {
+    var user = firebase.auth().currentUser;
+    var submitBtn = Manager.dom().select('#submit-button');
+    var alertEl = Manager.dom().select('#alert-parent');
+    Manager.dom().select('input[name="uid"]').setValue(user ? user.uid : '');
+    submitBtn.removeAttribute('disabled').removeClass('disabled')
+
+
+    Manager.dom().select('#contact-form').on('submit', function (event) {
+      var slapform = new Slapform(); // The script above exposes the global variable 'Slapform'
+      submitBtn.setAttribute('disabled', true).addClass('disabled')
+      alertEl.removeClass('alert-success').removeClass('alert-danger')
+
+      slapform
+      .submit({
+        account: '{{ site.contact.email-business }}',
+        data: {
+          // slap_honey: 'PENIS',
+          uid: document.querySelector('input[name="uid"]').value,
+          slap_subject: document.querySelector('input[name="slap_subject"]').value,
+          name: document.querySelector('input[name="name"]').value,
+          phone: document.querySelector('input[name="phone"]').value,
+          slap_replyto: document.querySelector('input[name="slap_replyto"]').value,
+          reason: document.querySelector('select[name="reason"]').value,
+          message: document.querySelector('textarea[name="message"]').value,
+        }
+      })
+      .then(function (result) {
+        alertEl.addClass('alert-success').setInnerHTML('Thank you! We will get back to you in 1 - 2 business days.')
+      })
+      .catch(function (error) {
+        console.error('Submission error', error);
+        submitBtn.removeAttribute('disabled').removeClass('disabled')
+        alertEl.addClass('alert-danger').setInnerHTML('Sorry, there was an error. Please try again later.')
+      })
+    })
+
+  })
 </script>

@@ -24,11 +24,17 @@ Manager.ready(function() {
       })
   } else if (window.location.pathname.includes('/contact')) {
 
-    import('slapform')
-      .then(function(mod) {
-        var slapform = mod.default;
-        console.log('---slapform', slapform);
-      })
+    // import('slapform')
+    //   .then(function(mod) {
+    //     var slapform = mod.default;
+    //     console.log('---slapform', slapform);
+    //   })
+
+    // import('../../../../node_modules/slapform/dist/index.js')
+    //   .then(function(mod) {
+    //     var slapform = mod.default;
+    //     console.log('---slapform', slapform);
+    //   })
 
     // Manager.auth().ready(function () {
     //   var user = firebase.auth().currentUser;
