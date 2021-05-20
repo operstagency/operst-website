@@ -1,6 +1,6 @@
 <div align="center">
-  <a href="https://cdn.itwcreativeworks.com/assets/itw-creative-works/images/logo/itw-creative-works-brandmark-black-x.svg">
-    <img src="https://cdn.itwcreativeworks.com/assets/itw-creative-works/images/logo/itw-creative-works-brandmark-black-x.svg">
+  <a href="https://operstagency.com">
+    <img src="https://cdn.itwcreativeworks.com/assets/operst/images/logo/operst-wordmark-black-x.svg?cb=1621033101">
   </a>
   <br>
   <br>
@@ -15,58 +15,20 @@
 ![GitHub contributors](https://img.shields.io/github/contributors/iwiedenm/ultimate-jekyll.svg)
 ![GitHub last commit](https://img.shields.io/github/last-commit/iwiedenm/ultimate-jekyll.svg)
 
-# Ultimate Jekyll
-**Ultimate Jekyll** is a template that helps you jumpstart your Jekyll sites and is fueled by an intuitive incorporation of npm, gulp, and is fully SEO optimized and blazingly fast. You can sync this **Template** repo with your copy of the project to get all the updates!
+# Operst
+**Operst** is a digital marketing agency that delivers comprehensive advertising solutions. Our expert services will maximize your ROAS to get more leads and grow your business
 
-[Site](https://template.itwcreativeworks.com) | [NPM Module](https://www.npmjs.com/package/ultimate-jekyll) | [GitHub Repo](https://github.com/iwiedenm/ultimate-jekyll)
+[Operst Agency](https://operstagency.com)
 
 </div>
 
-# Creating & synching new repo from the ultimate-jekyll template
-1. Navigate to [https://github.com/itw-creative-works/ultimate-jekyll/](https://github.com/itw-creative-works/ultimate-jekyll/) and click **Use this template** or just [generate it here](https://github.com/iwiedenm/ultimate-jekyll/generate).
-2. In the next window, name the new repository and choose an organization to host the repository.
-3. Click **1 Branch** in the middle bar and then the pencil icon next to `template` in the next window. Name it `master`.
-4. Open the newly created repository on GitHub and click **Open in Desktop** then choose location using GitHub desktop.
-5. In the repo's settings add a secret called `ACCESS_TOKEN` and paste a GitHub token that has write permissions for this repo.
-6. Open Terminal and do the following commands or simply `npm run template:setup`    
-7. Go back into GitHub desktop on the new repo and press **Push** in top bar.
-8. Initialize the new repo by entering this command in Terminal:
-  * `npm start`
+# Services
+## Social Media Advertising
+Maximize your brand's visibility and boost user engagement.
 
-# Get changes from the ultimate-jekyll template
-Perform the following steps or simply run `npm run template:update`
-1. Open GitHub Desktop and select your project (not ultimate-jekyll, the project that uses ultimate-jekyll).
-2. Change current branch to `template`.
-3. Then press **Fetch upstream**.
-4. Then **Pull upstream**.
-5. Change current branch to `master`.
-6. Click **Choose branch to merge into `master`** from the branch dropdown (at the bottom).
-7. Select `template` from the list.
-8. Click the blue **Merge `template` into `master`** button.
-9. Press **Push origin** in the top right.
+## SEO Services
+Dominate the first page of Google & be in the top 10 on Google Maps.
 
-# How to properly use the template
-This repo will only ever receive changes to files located in `master` folders. You can safely customize any file in `app` folders. For example:
-  * Do **NOT** edit: `assets/_src/js/master/main.js`
-  * Do edit: `assets/_src/js/app/app.js`
-You can always run `npm run template:update` to get all the latest updates from the **Ultimate Jekyll template** but be sure to check if there were any breaking changes.
+## PR Placements
+Stand out in the market and increase your clients' perception of your business.
 
-# Run a local https server
-1. Execute:
-  * `npm run create:cert`
-  * `npm run prototype:https`
-2. Press <kbd>cmd + option + i</kbd> on the webpage that opens.
-3. Go to **Security** tab and press **Show certificate**.
-4. Drag the certificate to your Desktop then double-click it
-5. Double-click it when it has opened in keychain
-6. Open the **trust** dropdown and change it to **always trust**
-
-# Things to regularly update on ultimate-jekyll
-* ./special/master/misc/master-service-worker.js = instances of Firebase SDKs being loaded
-
-# Things to regularly update on web-manager
-* Dependencies in package.json
-
-# Reference
-* https://medium.com/sweetmeat/how-to-keep-a-downstream-git-repository-current-with-upstream-repository-changes-10b76fad6d97
-* https://medium.com/@smrgrace/having-a-git-repo-that-is-a-template-for-new-projects-148079b7f178
