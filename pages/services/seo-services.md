@@ -7,7 +7,7 @@ permalink: /services/seo-services/
 meta:
   title: "SEO Agency - Operst Digital Marketing Company"
   description: "Operst is a search engine optimization agency providing comprehensive search engine marketing. We get your website on the first page of Google & the top 10 on Google Maps."
-  breadcrumb: "PR Placements"
+  breadcrumb: "SEO Services"
 
 ### PLATFORM ###
 service:
