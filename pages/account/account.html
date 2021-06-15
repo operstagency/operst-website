@@ -7,8 +7,8 @@ sitemap:
 
 ### REGULAR PAGES ###
 meta:
-  title: "Account - Operst"
-  description: "View your personal profile and stats for Operst."
+  title: "Account - {{ site.brand.name }}"
+  description: "View your personal profile and stats for {{ site.brand.name }}."
   breadcrumb: "Account"
   index: false
 
@@ -87,7 +87,7 @@ settings:
                     <img class="avatar-status avatar-lg-status" src="/assets/svg/illustrations/top-vendor.svg" alt="Image Description" data-toggle="tooltip" data-placement="top" title="Verified user">
                   </div> -->
 
-                  <div class="avatar avatar-xxl avatar-circle">
+                  <div class="avatar avatar-xl avatar-circle">
                     <i class="fas fa-user fa-4x text-primary"></i>
                   </div>
 
@@ -105,22 +105,16 @@ settings:
                       <i class="fas fa-id-card nav-icon"></i> General
                     </a>
                   </li>
-                  <li class="nav-item">
+                  <li class="nav-item" hidden>
                     <a class="nav-link account-panel-link disabled" data-panel="connections" href="#" disabled>
                       <i class="fas fa-link nav-icon"></i> Connections
                     </a>
                   </li>
-                  <!-- <li class="nav-item">
-                    <a class="nav-link " href="account-notifications.html">
-                      <i class="fas fa-bell nav-icon"></i> Notifications
-                      <span class="badge badge-soft-dark badge-pill nav-link-badge">1</span>
+                  <li class="nav-item">
+                    <a class="nav-link account-panel-link disabled" data-panel="change" href="#" disabled>
+                      <i class="fas fa-pencil-alt nav-icon"></i> Change
                     </a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link " href="account-preferences.html">
-                      <i class="fas fa-sliders-h nav-icon"></i> Preferences
-                    </a>
-                  </li> -->
                 </ul>
                 <!-- End List -->
 
@@ -133,17 +127,6 @@ settings:
                       <i class="fas fa-credit-card nav-icon"></i> Plans &amp; payment
                     </a>
                   </li>
-                  <!-- <li class="nav-item">
-                    <a class="nav-link " href="account-address.html">
-                      <i class="fas fa-map-marker-alt nav-icon"></i> Address
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link " href="account-teams.html">
-                      <i class="fas fa-users nav-icon"></i> Teams
-                      <span class="badge badge-soft-dark badge-pill nav-link-badge">+2 new users</span>
-                    </a>
-                  </li> -->
                 </ul>
                 <!-- End List -->
 
@@ -208,10 +191,18 @@ settings:
                   <label for="uidLabel" class="col-sm-3 col-form-label input-label">UID</label>
 
                   <div class="col-sm-9">
-                    <input type="text" class="form-control auth-uid-element" name="email" id="uidLabel" placeholder="xxxx" aria-label="xxxx" value="xxxx" readonly>
+                    <input type="text" class="form-control auth-uid-element" name="uid" id="uidLabel" placeholder="xxxx" aria-label="xxxx" value="xxxx" readonly>
                   </div>
                 </div>
                 <!-- End Form Group -->
+
+                <div class="row form-group">
+                  <label for="authKeyLabel" class="col-sm-3 col-form-label input-label">API Key</label>
+
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control auth-apikey-element" name="key" id="authKeyLabel" placeholder="xxxx" aria-label="xxxx" value="xxxx" readonly>
+                  </div>
+                </div>
 
                 <!-- Form Group -->
                 <!-- <div class="row align-items-center">
@@ -238,8 +229,9 @@ settings:
             <!-- End Footer -->
           </div>
 
+        </div>
 
-          <!-- End Card -->
+        <div class="account-panel" data-panel="change" hidden>
 
           <!-- Card -->
           <div class="card">
@@ -249,20 +241,22 @@ settings:
 
             <!-- Body -->
             <div class="card-body">
-              <p class="card-text">When you delete your account you lose access to all Operst services and we permanently delete your personal data.</p>
+              <p class="card-text">When you delete your account you lose access to all {{ site.brand.name }} services and we permanently delete your personal data.</p>
 
-              <form class="" action="{{ site.url }}/account/delete/" method="post">
+              <form class="" onsubmit="return false;">
                 <div class="form-group">
                   <!-- Custom Checkbox -->
                   <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="deleteAccountCheckbox" required>
+                    <input type="checkbox" class="custom-control-input auth-delete-account-confirmation-input" id="deleteAccountCheckbox" required>
                     <label class="custom-control-label" for="deleteAccountCheckbox">Confirm that I want to delete my account.</label>
                   </div>
                   <!-- End Custom Checkbox -->
                 </div>
 
+                <div class="alert alert-danger auth-delete-account-error-message-element" hidden></div>
+
                 <div class="d-flex justify-content-end">
-                  <button type="submit" class="btn btn-danger transition-3d-hover">Delete</button>
+                  <button type="submit" class="btn btn-danger transition-3d-hover auth-delete-account-btn">Delete</button>
                 </div>
               </form>
             </div>
@@ -374,12 +368,12 @@ settings:
               <div class="row">
                 <div class="col-md-6 mb-4 mb-md-0">
                   <div class="mb-4">
-                    <small class="text-cap">Your plan<span id="billing-frequency"> (billed loading...)</span>:</small>
-                    <h5><span id="billing-plan-id">loading...</span><span id="billing-start-date">loading...</span> </h5>
+                    <small class="text-cap">Your plan<span class="auth-billing-frequency-element"> (billed loading...)</span>:</small>
+                    <h5><span class="auth-billing-plan-id-element">loading...</span><span class="auth-billing-start-date-element">loading...</span> </h5>
                   </div>
 
                   <div>
-                    <small id="billing-expiration" class="text-cap text-danger"></small>
+                    <small class="text-cap text-danger auth-billing-expiration-date-element"></small>
                   </div>
 
                   <!-- <div>
@@ -389,8 +383,8 @@ settings:
                 </div>
 
                 <div class="col-md-6 text-md-right">
-                  <a id="billing-update-btn" class="btn btn-sm btn-white mr-1 mb-0 mb-md-2" href="#" hidden>Update</a>
-                  <a id="billing-subscribe-btn" class="btn btn-sm btn-success transition-3d-hover mb-0 mb-md-2" href="{{ site.url }}/pricing" hidden><i class="fas fa-star mr-1"></i> Subscribe</a>
+                  <a class="btn btn-sm btn-white mr-1 mb-0 mb-md-2 auth-billing-update-btn" href="#" hidden>Update</a>
+                  <a class="btn btn-sm btn-success transition-3d-hover mb-0 mb-md-2 auth-billing-subscribe-btn" href="{{ site.url }}/pricing" hidden><i class="fas fa-star mr-1"></i> Subscribe</a>
                 </div>
               </div>
             </div>
@@ -447,87 +441,9 @@ settings:
 <script type="text/javascript">
   Manager.auth().ready(function () {
 
-    var oauthURL = 'https://discord.com/api/oauth2/authorize?client_id=701375931918581810&redirect_uri=URL&response_type=code&scope=identify';
-    var isDevelopment = Manager.properties.meta.environment === 'development';
-    var apiLinkURL = isDevelopment ? 'http://localhost:5000/discord-link' : 'https://api.Operst.com/discord-link';
-    var apiUnlinkURL = isDevelopment ? 'http://localhost:5000/discord-unlink' : 'https://api.Operst.com/discord-unlink';
-    var cancelURL = isDevelopment ? 'http://localhost:4001/cancel/' : 'https://itwcreativeworks.com/cancel/';
-    var isLinked = false;
-
-    var MESSAGE_LINK_SUCCESS = 'Your Discord and Operst accounts have been linked! <br><br>You can go back to <a href="https://discord.com/app" target="_blank" class="btn btn-light btn-xs mx-2">Discord</a> now.';
-    var MESSAGE_UNLINK_SUCCESS = 'Your Discord and Operst accounts have been unlinked.';
-
     var dom = Manager.dom();
     var panelLinks = dom.select('.account-panel-link');
     var panelPanel = dom.select('.account-panel');
-
-    var billingSubscribeBtn = document.getElementById('billing-subscribe-btn');
-    var billingUpdateBtn = document.getElementById('billing-update-btn');
-    var billingPlanId = document.getElementById('billing-plan-id');
-    var billingFrequencyEl = document.getElementById('billing-frequency');
-    var billingStartDateEl = document.getElementById('billing-start-date');
-    var billingExpirationDateEl = document.getElementById('billing-expiration');
-
-    var connectionsDiscordUnlinkBtn = dom.select('#connections-discord-unlink');
-    var connectionsDiscordLinkBtn = dom.select('#connections-discord-link');
-    var connectionsPayPalLinkBtn = dom.select('#connections-paypal-link');
-    var connectionsDiscordStatusEl = document.getElementById('connections-discord-status');
-
-    var connectionsPayPalGroup = document.getElementById('connections-paypal-group');
-    var connectionsPayPalProfileInput = document.getElementById('connections-paypal-profile');
-
-    var connectionsAlertEl = document.getElementById('connections-alert');
-
-    var fetchedBilling = false;
-
-    var qsAccessToken = Manager.properties.page.queryString.get('access_token');
-    var qsTokenType = Manager.properties.page.queryString.get('token_type');
-    var qsStatus = Manager.properties.page.queryString.get('status');
-    var qsError = Manager.properties.page.queryString.get('error');
-    var qsLinkDiscord = Manager.properties.page.queryString.get('link-discord');
-    var qsLinkPayPal = Manager.properties.page.queryString.get('link-paypal');
-    var qsLinkPayPalProfileId = Manager.properties.page.queryString.get('profile-id');
-
-
-    // Discord link
-    if (qsAccessToken) {
-      firebase.auth().currentUser.getIdToken(false)
-      .then(function(token) {
-        fetch(apiLinkURL, {
-          method: 'POST',
-          headers: {
-            authorization: `Bearer ${token}`,
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            completeLink: true,
-            accessToken: qsAccessToken,
-          })
-        })
-        .then(function (res) {
-          if (res.status >= 200 && res.status < 300) {
-            return res.json();
-          } else {
-            return res.text()
-            .then(function (r) {
-              throw new Error(r || res.statusText)
-            })
-          }
-        })
-        .then(function (response) {
-          isLinked = true;
-          setStatus(MESSAGE_LINK_SUCCESS.replace('{id}', response.id))
-        })
-        .catch(function (e) {
-          setStatus(new Error('There was an error linking your accounts. Please try again: ' + e))
-        });
-      })
-      .catch(function(error) {
-        setStatus(error);
-      });
-    }
-
-
 
     panelLinks.on('click', function (event) {
       panelLinks.removeClass('active');
@@ -537,325 +453,20 @@ settings:
 
       dom.select('.account-panel[data-panel="' + event.target.dataset.panel + '"]').removeAttribute('hidden');
 
-      if (event.target.dataset === 'billing' || event.target.dataset === 'connections') {
-        fetchAccount();
-      }
     })
     .removeAttribute('disabled')
     .removeClass('disabled')
 
-    connectionsDiscordUnlinkBtn.on('click', function (event) {
-      discordUnlink();
-    })
+    panelLinks.elements.list[0].click();
 
-    connectionsDiscordLinkBtn.on('click', function (event) {
-      discordLink();
-    })
-
-    connectionsPayPalLinkBtn.on('click', function (event) {
-      linkPayPal();
-    })
-
-    // Set first tab
-    if (qsLinkDiscord) {
-      dom.select('.account-panel-link[data-panel="connections"]').elements.list[0].click();
-      if (qsStatus === 'done') {
-        if (qsError) {
-          setStatus(new Error(qsError));
-        }
-      }
-    } else if (qsLinkPayPal) {
-      dom.select('.account-panel-link[data-panel="connections"]').elements.list[0].click();
-      connectionsPayPalGroup.removeAttribute('hidden');
-      connectionsPayPalProfileInput.value = qsLinkPayPalProfileId;
-    } else {
-      panelLinks.elements.list[0].click();
-    }
-
-    fetchAccount()
-    // <a class="nav-link account-panel-link" data-panel="info" href="#" disabled>
-    // <div class="account-panel" data-panel="info" hidden>
-
-    function uppercase(str) {
-      return str.charAt(0).toUpperCase() + str.slice(1);
-    }
-
-    function getMonth(date) {
-      var monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-
-      return monthNames[date.getMonth()];
-    }
-
-    function fetchAccount() {
-      var user = firebase.auth().currentUser;
-      // console.log('----1', fetchedBilling, user.uid);
-      if (!fetchedBilling && user) {
-        // console.log('----2');
-        firebase.firestore().doc(`/users/${user.uid}`)
-          .onSnapshot(function (snapshot) {
-            var data = snapshot.data() || {};
-
-            // Fix data from snap
-            data.roles = data.roles || {};
-            data.roles.betaTester = data.roles.betaTester === true || data.roles.betaTester === 'true';
-            data.roles.developer = data.roles.developer === true || data.roles.developer === 'true';
-            data.roles.admin = data.roles.admin === true || data.roles.admin === 'true';
-            data.roles.promoExempt = data.roles.promoExempt === true || data.roles.promoExempt === 'true';
-
-            data.plan = data.plan || {};
-            data.plan.expires = data.plan.expires || {};
-            data.plan.expires.timestamp = data.plan.expires.timestamp || '1999-01-01T00:00:00Z';
-            data.plan.payment = data.plan.payment || {};
-            data.plan.payment.startDate = data.plan.payment.startDate || {};
-            data.plan.payment.startDate.timestamp = data.plan.payment.startDate.timestamp || '1999-01-01T00:00:00Z';
-            data.plan.payment.frequency = data.plan.payment.frequency || 'unknown';
-            data.plan.payment.orderId = data.plan.payment.orderId || 'unknown';
-            data.plan.payment.resourceId = data.plan.payment.resourceId || 'unknown';
-
-            data.plan.id = data.plan.id || 'basic';
-
-
-            data.oauth2 = data.oauth2 || {};
-            data.oauth2.discord = data.oauth2.discord || {};
-            data.oauth2.discord.user = data.oauth2.discord.user || {};
-            // data.oauth2.discord.user.id = data.oauth2.discord.user.id || null;
-
-            var planExpireDate = new Date(data.plan.expires.timestamp);
-            var now = new Date();
-            var daysTillExpire = Math.floor(( planExpireDate - now ) / 86400000);
-            // console.log('daysTillExpire', daysTillExpire);
-
-            if (data.plan.id === 'premium' && planExpireDate > now) {
-              data.plan.id = 'premium';
-            } else {
-              data.plan.id = 'basic';
-            }
-
-            // data.plan.id = 'basic'
-
-            billingSubscribeBtn.setAttribute('hidden', true);
-            billingUpdateBtn.setAttribute('hidden', true);
-
-            var updateURL = new URL(cancelURL);
-            if (data.plan.id === 'premium') {
-              billingUpdateBtn.removeAttribute('hidden');
-              updateURL.searchParams.set('appName', 'Operst');
-              updateURL.searchParams.set('supportUrl', '{{ site.url }}/support');
-              updateURL.searchParams.set('supportEmail', '{{ site.contact.email-support }}');
-              updateURL.searchParams.set('userEmail', user.email);
-              updateURL.searchParams.set('userId', user.uid);
-              updateURL.searchParams.set('orderId', data.plan.payment.orderId);
-              updateURL.searchParams.set('resourceId', data.plan.payment.resourceId);
-              billingUpdateBtn.setAttribute('href', updateURL.toString());
-            } else {
-              billingSubscribeBtn.removeAttribute('hidden');
-            }
-
-            var startDate = new Date(data.plan.payment.startDate.timestamp);
-            billingPlanId.innerText = uppercase(data.plan.id);
-            billingStartDateEl.innerText = data.plan.id === 'premium' ? ' - Purchased ' + getMonth(startDate) + ' ' + startDate.getDate() + ', ' + startDate.getFullYear() : '';
-            billingFrequencyEl.innerText = data.plan.id === 'premium' ? ' (billed ' + uppercase(data.plan.payment.frequency) + ')' : '';
-            billingExpirationDateEl.innerHTML = data.plan.id === 'premium' && daysTillExpire < 366
-              ? '<i class="fas fa-exclamation-triangle mr-1"></i> Expires in ' + daysTillExpire + ' days '
-              : ''
-
-
-            // Discord
-            // var connectionsDiscordUnlinkBtn = document.getElementById('connections-discord-unlink');
-            // var connectionsDiscordLinkBtn = document.getElementById('connections-discord-link');
-            // var connectionsDiscordStatusEl = document.getElementById('connections-discord-status');
-            if (data.oauth2.discord.user.id) {
-              connectionsDiscordStatusEl.innerText = 'Linked: ' + data.oauth2.discord.user.id;
-              connectionsDiscordLinkBtn.setAttribute('disabled', true).addClass('disabled')
-              connectionsDiscordUnlinkBtn.removeAttribute('disabled').removeClass('disabled')
-            } else {
-              connectionsDiscordStatusEl.innerText = 'Not linked';
-              connectionsDiscordLinkBtn.removeAttribute('disabled').removeClass('disabled')
-              connectionsDiscordUnlinkBtn.setAttribute('disabled', true).addClass('disabled')
-
-            }
-
-
-            console.log('data', data);
-
-            // Assign it to userObj
-            // userObj.auth.email = newUser.email;
-            // userObj.auth.uid = newUser.uid;
-            // userObj.plan.expires.timestamp = new Date(get(data, 'plan.expires.timestamp', '1999-01-01T00:00:00Z')).toISOString();
-            // userObj.plan.expires.timestampUNIX = Math.round(new Date(userObj.plan.expires.timestamp).getTime() / 1000);
-            // userObj.plan.devices = get(data, 'plan.devices', 1);
-            //
-            // let difference = ((new Date(userObj.plan.expires.timestamp).getTime() - new Date().getTime())/(24*3600*1000));
-            // if (difference > -1 && get(data, 'plan.id', 'basic') === 'premium') {
-            //   userObj.plan.id = 'premium';
-            // } else {
-            //   userObj.plan.id = 'basic';
-            // }
-            //
-            // userObj.roles.betaTester = (data.roles.betaTester && userObj.plan.id === 'premium');
-            // userObj.roles.developer = data.roles.developer;
-            // userObj.roles.admin = data.roles.admin;
-            //
-            // // logger.log('Got firestore snap');
-            // postAccountRetrieve(userObj);
-            fetchedBilling = true;
-          }, function (e) {
-            console.error('Could not get account info via firestore', e);
-          });
-      }
-    }
-
-    // DISCORD LINK
-    function generateRandomString() {
-      var rand = Math.floor(Math.random() * 10);
-      var randStr = '';
-
-      for (var i = 0; i < 20 + rand; i++) {
-        randStr += String.fromCharCode(33 + Math.floor(Math.random() * 94));
-      }
-
-      return randStr;
-    }
-
-    function setStatus(input) {
-      connectionsAlertEl.classList.remove('alert-info');
-      connectionsAlertEl.classList.remove('alert-danger');
-      connectionsAlertEl.classList.remove('alert-success');
-
-      // loginEl.href = oauthURL;
-      // loginEl.style.display = 'none';
-      // unlinkEl.style.display = 'none';
-
-      if (input instanceof Error) {
-        connectionsAlertEl.classList.add('alert-danger')
-        connectionsAlertEl.innerHTML = input.message;
-        // if (isLinked) {
-        //   unlinkEl.style.display = 'block';
-        // } else {
-        //   loginEl.style.display = 'block';
-        // }
-        // loginEl.classList.remove('disabled');
-        // unlinkEl.classList.remove('disabled');
-      } else if (input === 'loading') {
-        connectionsAlertEl.classList.add('alert-info')
-        connectionsAlertEl.innerHTML = 'Loading...';
-
-        // loginEl.classList.add('disabled');
-        // unlinkEl.classList.add('disabled');
-      } else {
-        connectionsAlertEl.classList.add('alert-success')
-        connectionsAlertEl.innerHTML = input;
-        // if (isLinked) {
-        //   unlinkEl.style.display = 'block';
-        // } else {
-        //   loginEl.style.display = 'block';
-        // }
-
-        // loginEl.classList.remove('disabled');
-        // unlinkEl.classList.remove('disabled');
-      }
-    }
-
-
-    function discordLink() {
-      setStatus('loading');
-      var user = firebase.auth().currentUser;
-      if (!user) { return }
-      oauthURL = oauthURL.replace('URL', encodeURIComponent(apiLinkURL))
-
-      window.location.href = oauthURL;
-
-    }
-
-    function discordUnlink() {
-      setStatus('loading');
-      var user = firebase.auth().currentUser;
-      if (!user) { return }
-
-      user.getIdToken(false)
-      .then(function(token) {
-        fetch(apiUnlinkURL, {
-          method: 'POST',
-          headers: {
-            authorization: `Bearer ${token}`,
-            'Content-Type': 'application/json'
-          },
-        })
-        .then(function (res) {
-          if (res.status >= 200 && res.status < 300) {
-            return res.json();
-          } else {
-            return res.text()
-            .then(function (r) {
-              throw new Error(r || res.statusText)
-            })
-          }
-        })
-        .then(function (response) {
-          isLinked = false;
-          setStatus(MESSAGE_UNLINK_SUCCESS.replace('{id}', response.id))
-        })
-        .catch(function (e) {
-          setStatus(new Error('There was an error unlinking your accounts. Please try again: ' + e))
-        });
-      })
-
-
-    }
-
-  var payPalLinkInProgress = false;
-  function linkPayPal() {
-    var linkUrl = Manager.properties.meta.environment === 'development'
-      ? 'http://localhost:5000/paypal-link'
-      : 'https://api.Operst.com/paypal-link'
-    var user = firebase.auth().currentUser;
-    var profileId = connectionsPayPalProfileInput.value;
-
-    if (!user) {return }
-
-    setStatus('loading');
-
-    if (!profileId) {
-      return setStatus(new Error('You must enter a PayPal subscription ID. You can find this number in your PayPal account and it has the following format: I-Y3FEL44WUVPU'));
-    }
-
-    if (payPalLinkInProgress) { return }
-
-    // console.log('----1', linkUrl);
-    payPalLinkInProgress = true;
-
-    user.getIdToken(false)
-    .then(function(token) {
-      fetch(linkUrl, {
-        method: 'POST',
-        body: JSON.stringify({
-          profileId: profileId,
-          authenticationToken: token,
-        }),
-        headers: {
-          'Content-Type': 'application/json'
-        },
-      })
-      .then(function (res) {
-        if (res.status >= 200 && res.status < 300) {
-          return res.json();
-        } else {
-          throw new Error(res.statusText);
-        }
-      })
-      .then(function (r) {
-        connectionsPayPalGroup.setAttribute('hidden', true);
-        setStatus('You have successfully connected your PayPal account to Operst. Your subscription should now be active.');
-        payPalLinkInProgress = false;
-      })
-      .catch(function (e) {
-        setStatus(e);
-        payPalLinkInProgress = false;
+    Manager.account().import()
+    .then(function (Account) {
+      var account = new Account();
+      account.resolve()
+      .then(function (user) {
+        Manager._currentUserAccount = user;
       })
     })
-
-  }
-
 
   })
 </script>
