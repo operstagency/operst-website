@@ -20,7 +20,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 
 # Custom Configuration
 version: '1.0.0'
-app: 'itw-creative-works'
+app: 'operst'
 meta:
   title: "Operst Agency"
   description: "A digital marketing agency that will maximize your ROAS, grow your business, and increase your bottom line."
