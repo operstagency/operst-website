@@ -1,4 +1,4 @@
-{{ site.brand.name }}---
+---
 ### ALL PAGES ###
 layout: app/global/legal
 permalink: /terms/
