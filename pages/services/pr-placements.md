@@ -6,7 +6,7 @@ permalink: /services/pr-placements/
 ### REGULAR PAGES ###
 meta:
   title: "PR Placement Agency - Operst Digital Marketing Company"
-  description: "Operst creates targeted public relations solutions that work with your company's marketing strategies to drive tangible results to grow your brand."
+  description: "Operst is a public relations agency creating targeted public relations solutions that work with your company's marketing strategies to drive tangible results to grow your brand."
   breadcrumb: "PR Placements"
 
 ### PLATFORM ###

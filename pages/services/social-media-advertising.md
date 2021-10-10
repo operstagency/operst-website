@@ -6,7 +6,7 @@ permalink: /services/social-media-advertising/
 ### REGULAR PAGES ###
 meta:
   title: "Social Media Advertising Agency - Operst Digital Marketing Company"
-  description: "Operst provides social media marketing and strategic planning services to help companies increase brand awareness and generate leads."
+  description: "Operst is a social media marketing agency providing social media ads optimization and strategic planning services to help companies increase brand awareness and generate leads."
   breadcrumb: "Social Media Advertising"
 
 ### PLATFORM ###
