@@ -22,7 +22,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 version: '1.0.0'
 app: 'operst'
 meta:
-  title: "Operst Agency"
+  title: "Operst Agency - A Growth-focused Digital Marketing Agency"
   description: "A digital marketing agency that will maximize your ROAS, grow your business, and increase your bottom line."
   og-image: "https://cdn.itwcreativeworks.com/assets/operst/images/logo/operst-brandmark-black-1024x1024.png"
   keywords: "" # false or blank to disable, comma separated kws
