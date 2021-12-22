@@ -1,0 +1,247 @@
+---
+### ALL PAGES ###
+layout: master/global/default
+permalink: /blog/
+sitemap:
+  priority: 1.0
+
+### REGULAR PAGES ###
+meta:
+  title: "Blog - {{ site.brand.name }}"
+  description: "Stay up to date with the latest {{ site.brand.name }} news and best practices for digital marketing and maximizing your ROAS."
+  breadcrumb: "Blog"
+pagination:
+  enabled: true
+---
+<main id="content" role="main">
+  <!-- Hero Section -->
+  <div class="container space-top-3 space-bottom-1 space-bottom-md-2">
+    <div class="w-md-80 w-lg-75 text-center mx-md-auto">
+      <h1 class="display-4">{{ site.brand.name }} Blog</h1>
+      <p class="lead">{{ page.meta.description | liquify }}</p>
+    </div>
+  </div>
+  <!-- End Hero Section -->
+
+  <!-- Blog Card Section -->
+  <div class="container space-top-md-2 space-bottom-2 space-bottom-lg-3">
+    <div class="row justify-content-lg-between align-items-lg-center mb-7">
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <!-- <div class="d-sm-flex align-items-sm-center text-center text-sm-left">
+          <span class="d-block mr-sm-3 mb-2 mb-sm-1">Tags:</span>
+          <a class="btn btn-xs btn-soft-secondary btn-pill mx-sm-1 mb-1" href="javascript:;">Business</a>
+          <a class="btn btn-xs btn-soft-secondary btn-pill mx-sm-1 mb-1" href="javascript:;">Health</a>
+          <a class="btn btn-xs btn-soft-secondary btn-pill mx-sm-1 mb-1" href="javascript:;">Environment</a>
+          <a class="btn btn-xs btn-soft-secondary btn-pill mx-sm-1 mb-1" href="javascript:;">Adventure</a>
+        </div> -->
+      </div>
+
+      <div class="col-lg-4">
+        <form class="input-group input-group-sm input-group-merge input-group-flush" action="https://www.google.com" target="_blank">
+          <input type="hidden" name="cx" value="partner-{{ site.advertising.google-adsense }}:{{ site.advertising.cse-site-id }}">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="search" name="q" class="form-control pl-1" placeholder="Search articles" aria-label="Search articles" aria-describedby="searchLabel">
+          <div class="input-group-append">
+            <div class="input-group-text" id="searchLabel">
+              <i class="fas fa-search"></i>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+    {% for post in paginator.posts %}
+    	{% assign postindex = forloop.index %}
+
+      {% if paginator.page != 1 %}
+        {% break %}
+      {% endif %}
+
+    	{% if postindex == 1 %}
+
+
+        <article class="card mb-11">
+          <div class="row no-gutters">
+            <div class="col-lg-8">
+              <div class="position-relative overflow-hidden">
+                <a href="{{ site.url }}{{ post.url }}">
+                  {%- include /master/helpers/blog-image.html id=post.post.id name=post.url class="card-img" alt=post.post.title -%}
+                </a>
+                <figure class="d-none d-lg-block">
+                  <svg class="ie-curved-x position-absolute top-0 right-0 bottom-0 mr-n1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 100.1 1920" height="101%">
+                    <path fill="#fff" d="M0,1920c0,0,93.4-934.4,0-1920h100.1v1920H0z"/>
+                  </svg>
+                </figure>
+                <figure class="d-lg-none mb-n1">
+                  <svg class="ie-curved-y position-absolute right-0 bottom-0 left-0" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1920 100.1">
+                    <path fill="#fff" d="M0,0c0,0,934.4,93.4,1920,0v100.1H0L0,0z"/>
+                  </svg>
+                </figure>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="card-body d-flex flex-column h-100 p-4 p-lg-5">
+                <h2 class="h4"><a class="text-inherit" href="{{ site.url }}{{ post.url }}">{{ post.post.title }}</a></h2>
+                <p>{{ post.post.excerpt }}</p>
+                <div class="media align-items-center mt-auto">
+                  <!-- <div class="avatar-group">
+                    <a class="avatar avatar-xs avatar-circle" href="#" data-toggle="tooltip" data-placement="top" title="Aaron Larsson">
+                      <img class="avatar-img" src="/assets/img/100x100/img3.jpg" alt="Image Description">
+                    </a>
+                  </div> -->
+                  <div class="media-body d-flex justify-content-end text-muted font-size-1 ml-2">
+                    {{ post.date | date_to_string }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+
+        {% break %}
+    	{% endif %}
+    {% endfor %}
+
+
+    <!-- Blog Card -->
+
+    <!-- End Blog Card -->
+
+    <!-- Title -->
+    <div class="row mb-5">
+      <div class="col-6">
+
+        {% if paginator.page == 1 %}
+          <h2 class="h3 mb-0">More recent posts</h2>
+        {% endif %}
+
+      </div>
+      <!-- <div class="col-6 text-right">
+        <a class="font-weight-bold" href="#">View all <i class="fas fa-angle-right fa-sm ml-1"></i></a>
+      </div> -->
+    </div>
+    <!-- End Title -->
+
+    <div class="row mb-3">
+      {% for post in paginator.posts %}
+      	{% assign postindex = forloop.index %}
+
+        {% if postindex == 1 and paginator.page == 1 %}
+          {% continue %}
+        {% endif %}
+
+        {% assign modulo2 = postindex | modulo: 2 %}
+        {% assign modulo3 = postindex | modulo: 3 %}
+
+        {% if modulo2 == 0 %}
+          <div class="col-sm-6 col-lg-4 mb-3 mb-sm-8">
+            <!-- Blog Card -->
+            <article class="card bg-dark text-white h-100">
+              <div class="card-body p-4 p-lg-5">
+                <span class="badge badge-primary py-2 px-3 mb-5">Featured</span>
+                <h3 class="h5"><a class="text-white" href="{{ site.url }}{{ post.url }}">{{ post.post.title }}</a></h3>
+                <p>{{ post.post.excerpt }}</p>
+              </div>
+              <div class="card-footer bg-dark border-0 pt-0 px-5 pb-5">
+                <div class="media align-items-center">
+                  <!-- <div class="avatar-group">
+                    <a class="avatar avatar-xs avatar-circle" href="#" data-toggle="tooltip" data-placement="top" title="Aaron Larsson">
+                      <img class="avatar-img" src="/assets/img/100x100/img3.jpg" alt="Image Description">
+                    </a>
+                  </div> -->
+                  <div class="media-body d-flex justify-content-end text-white-70 font-size-1 ml-2">
+                    {{ post.date | date_to_string }}
+                  </div>
+                </div>
+              </div>
+            </article>
+            <!-- End Blog Card -->
+          </div>
+        {% else %}
+          <div class="col-sm-6 col-lg-4 mb-3 mb-sm-8">
+            <!-- Blog Card -->
+            <article class="card h-100">
+              <div class="card-img-top position-relative">
+                <a href="{{ site.url }}{{ post.url }}">
+                  {%- include /master/helpers/blog-image.html id=post.post.id name=post.url class="card-img" alt=post.post.title -%}
+                </a>
+                <figure class="ie-curved-y position-absolute right-0 bottom-0 left-0 mb-n1">
+                  <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1920 100.1">
+                    <path fill="#fff" d="M0,0c0,0,934.4,93.4,1920,0v100.1H0L0,0z"/>
+                  </svg>
+                </figure>
+              </div>
+
+              <div class="card-body">
+                <h3 class="h5"><a class="text-inherit" href="{{ site.url }}{{ post.url }}">{{ post.post.title }}</a></h3>
+                <p>{{ post.post.excerpt }}</p>
+              </div>
+
+              <div class="card-footer border-0 pt-0">
+                <div class="media align-items-center">
+                  <!-- <div class="avatar-group">
+                    <a class="avatar avatar-xs avatar-circle" href="#" data-toggle="tooltip" data-placement="top" title="Nataly Gaga">
+                      <img class="avatar-img" src="/assets/img/100x100/img1.jpg" alt="Image Description">
+                    </a>
+                  </div> -->
+                  <div class="media-body d-flex justify-content-end text-muted font-size-1 ml-2">
+                    {{ post.date | date_to_string }}
+                  </div>
+                </div>
+              </div>
+            </article>
+            <!-- End Blog Card -->
+          </div>
+        {% endif %}
+
+
+      {% endfor %}
+
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-12">
+        {% include /master/modules/adunits/adsense-in-article.html index="1" %}
+      </div>
+    </div>
+
+    <!-- Pagination -->
+    <nav aria-label="Page navigation">
+      <ul class="pagination mb-0 d-flex flex-wrap">
+
+        <li class="page-item {% if paginator.previous_page %}{% else %}disabled{% endif %}">
+          <a class="page-link" href="{{ site.url }}/blog{% if paginator.page != 2 %}/page/{{ paginator.previous_page }}{% endif %}" aria-label="Previous">
+            <i class="fa fa-chevron-left"></i>
+          </a>
+        </li>
+        {% for num in (1..paginator.total_pages) %}
+      		{% if num == 1 %}
+            <li class="page-item {% if paginator.page == 1 %}active{% endif %}"><a class="page-link" href="{{ site.url }}/blog">1</a></li>
+      		{% else %}
+            <li class="page-item {% if paginator.page == num %}active{% endif %}"><a class="page-link" href="{{ site.url }}/blog/page/{{ num }}">{{ num }}</a></li>
+      		{% endif %}
+    		{% endfor %}
+        <li class="page-item {% if paginator.next_page %}{% else %}disabled{% endif %}">
+          <a class="page-link" href="{{ site.url }}/blog/page/{{ paginator.next_page }}" aria-label="Next">
+            <i class="fa fa-chevron-right"></i>
+          </a>
+        </li>
+
+        <!-- <li class="page-item disabled"><a class="page-link" href="#">...</a></li>
+        <li class="page-item"><a class="page-link" href="#">5</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Next">
+            <span class="d-none d-sm-inline-block mr-1">Next</span>
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li> -->
+      </ul>
+    </nav>
+    <!-- End Pagination -->
+  </div>
+  <!-- End Blog Card Section -->
+</main>
+<!-- ========== END MAIN ========== -->

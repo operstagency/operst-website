@@ -38,14 +38,14 @@ socials:
   facebook: "operstagency" # string, example: somiibo
   twitter: "operstagency" # string, example: somiibo
   linkedin: "operstagency" # string, example: somiibo
-  youtube: "" # string, example: somiibo
+  youtube: "operstagency" # string, example: somiibo
   instagram: "operstagency" # string, example: somiibo
-  tumblr: "" # string, example: somiibo
+  tumblr: "operstagency" # string, example: somiibo
   slack: "" # string, example: https://somiibo.slack.com
   discord-invite: "" # string, example: https://discord.gg/vkeZEqb
 
 comments:
-  disqus: "" # string, example: somiibo
+  disqus: "operstagency" # string, example: somiibo
 
 tracking:
   google-analytics: UA-196943941-1 # false to disable, example: UA-123456789
