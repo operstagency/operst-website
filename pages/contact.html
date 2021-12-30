@@ -108,7 +108,7 @@ meta:
 
       <div class="col-12">
         <!-- Form -->
-        <form id="contact-form" class="js-validate card shadow-lg mb-4" onsubmit="return false;">
+        <form class="js-validate card shadow-lg mb-4 slapform" action="https://api.slapform.com/{{ site.slapform-form-id }}" data-slap-type="ajax" method="POST">
           <div class="card-header border-0 bg-light text-center py-4 px-4 px-md-6">
             <h2 class="h4 mb-0">Send us a request</h2>
           </div>
@@ -116,7 +116,6 @@ meta:
           <div class="card-body p-4 p-md-6">
             <div class="row">
 
-              <input type="text" class="form-control" name="uid" hidden>
               <input type="text" class="form-control" name="slap_subject" value="{{ site.brand.name }} Contact Form [{slap_meta_date_unix}]" hidden>
 
               <!-- Input -->
@@ -168,9 +167,12 @@ meta:
               </div>
             </div>
 
-            <div id="alert-parent" class="alert" role="alert"></div>
-
-            <button id="submit-button" type="submit" class="btn btn-block btn-primary transition-3d-hover">Submit</button>
+            <div class="col-12 mb-4">
+              <div class="alert alert-danger slapform-error" hidden></div>
+              <div class="alert alert-success slapform-success" hidden></div>
+            </div>
+            
+            <button type="submit" class="btn btn-block btn-primary transition-3d-hover disabled" disabled>Submit</button>
           </div>
         </form>
         <!-- End Form -->
@@ -186,45 +188,3 @@ meta:
 
 </main>
 <!-- ========== END MAIN ========== -->
-<script src="https://cdn.jsdelivr.net/npm/slapform@latest/dist/index.min.js"></script>
-
-<script type="text/javascript">
-  Manager.auth().ready(function () {
-    var user = firebase.auth().currentUser;
-    var submitBtn = Manager.dom().select('#submit-button');
-    var alertEl = Manager.dom().select('#alert-parent');
-    Manager.dom().select('input[name="uid"]').setValue(user ? user.uid : '');
-    submitBtn.removeAttribute('disabled').removeClass('disabled')
-
-
-    Manager.dom().select('#contact-form').on('submit', function (event) {
-      var slapform = new Slapform(); // The script above exposes the global variable 'Slapform'
-      submitBtn.setAttribute('disabled', true).addClass('disabled')
-      alertEl.removeClass('alert-success').removeClass('alert-danger')
-
-      slapform
-      .submit({
-        form: '{{ site.slapform-form-id }}',
-        data: {
-          // slap_honey: 'PENIS',
-          uid: document.querySelector('input[name="uid"]').value,
-          slap_subject: document.querySelector('input[name="slap_subject"]').value,
-          name: document.querySelector('input[name="name"]').value,
-          phone: document.querySelector('input[name="phone"]').value,
-          slap_replyto: document.querySelector('input[name="slap_replyto"]').value,
-          reason: document.querySelector('select[name="reason"]').value,
-          message: document.querySelector('textarea[name="message"]').value,
-        }
-      })
-      .then(function (result) {
-        alertEl.addClass('alert-success').setInnerHTML('Thank you! We will get back to you in 1 - 2 business days.')
-      })
-      .catch(function (error) {
-        console.error('Submission error', error);
-        submitBtn.removeAttribute('disabled').removeClass('disabled')
-        alertEl.addClass('alert-danger').setInnerHTML('Sorry, there was an error. Please try again later.')
-      })
-    })
-
-  })
-</script>
