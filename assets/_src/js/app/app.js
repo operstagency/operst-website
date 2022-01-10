@@ -17,39 +17,10 @@ Manager.ready(function() {
         import('../../../_src-uncompiled/js/hs.slick-carousel.js')
           .then(function(mod) {
             $('.js-slick-carousel').each(function() {
-              console.log('---this', this);
               var slickCarousel = $.HSCore.components.HSSlickCarousel.init($(this));
             });
           })
       })
-  } else if (window.location.pathname.includes('/contact')) {
-
-    // import('slapform')
-    //   .then(function(mod) {
-    //     var slapform = mod.default;
-    //     console.log('---slapform', slapform);
-    //   })
-
-    // import('../../../../node_modules/slapform/dist/index.js')
-    //   .then(function(mod) {
-    //     var slapform = mod.default;
-    //     console.log('---slapform', slapform);
-    //   })
-
-    // Manager.auth().ready(function () {
-    //   var user = firebase.auth().currentUser;
-    //   var submitBtn = Manager.dom().select('#submit-button');
-    //   Manager.dom().select('input[name="uid"]').setValue(user ? user.uid : '');
-    //   submitBtn.removeAttribute('disabled').removeClass('disabled')
-    //   Manager.dom().select('#contact-form').on('submit', function (event) {
-    //     submitBtn.setAttribute('disabled', true).addClass('disabled')
-    //   })
-    //
-    //   Manager.dom().select('#contact-form').on('submit', function (event) {
-    //     console.log('----EVENT', event);
-    //   })
-    //
-    // })
   }
 
 });
