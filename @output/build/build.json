@@ -1,0 +1,30 @@
+{
+  "environment": "production",
+  "repo": {
+    "user": "operstagency",
+    "name": "operst-website"
+  },
+  "npm-build": {
+    "timestamp_utc": "2022-07-13T12:21:56Z",
+    "timestamp_pst": "2022-07-13T05:21:56Z"
+  },
+  "gh-pages-push": {
+    "timestamp_utc": "2022-07-13T12:21:57Z",
+    "timestamp_pst": "2022-07-13T05:21:57Z"
+  },
+  "packages": {
+    "web-manager": "3.0.10"
+  },
+  "brand": {
+    "name": "Operst Agency",
+    "type": "Corporation",
+    "description": "A digital marketing agency that will maximize your ROAS, grow your business, and increase your bottom line.",
+    "logo-image": "https://cdn.itwcreativeworks.com/assets/operst/images/logo/operst-brandmark-black-1024x1024.png",
+    "logo-image-svg": "https://cdn.itwcreativeworks.com/assets/operst/images/logo/operst-wordmark-black-x.svg",
+    "address-locality": "Los Angeles",
+    "address-country": "United States"
+  },
+  "admin-dashboard": {
+    "pages": []
+  }
+}
